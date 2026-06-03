@@ -1,5 +1,21 @@
 # blockAds module variants
 
+## 来源与感谢
+
+本仓库的模块来源于 fmz200 / wool_scripts：
+
+```text
+https://github.com/fmz200/wool_scripts
+```
+
+原始模块：
+
+```text
+https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/blockAds.module
+```
+
+感谢原作者及相关脚本维护者长期整理和维护规则。本仓库仅做个人需求向的自动同步派生：保留哔哩哔哩热搜、搜索发现和默认搜索词，其余内容尽量保持上游原样。
+
 ## 保留哔哩哔哩热搜和搜索发现
 
 订阅这个模块：
