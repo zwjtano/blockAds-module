@@ -1,0 +1,75 @@
+name: Update Loon Bilibili Search Preserved Plugin
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "35 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Loon plugin from upstream
+        shell: python
+        run: |
+          from pathlib import Path
+          from urllib.request import urlopen
+
+          upstream = "https://rucu6.pages.dev/Plugins/myblockads.lpx"
+          output = Path("myblockads-bilibili-search-preserved.lpx")
+
+          text = urlopen(upstream, timeout=60).read().decode("utf-8")
+          lines = text.splitlines()
+          patched = []
+
+          for line in lines:
+              if line.startswith("#!name="):
+                  patched.append("#!name=MyBlockAds - 保留哔哩哔哩热搜和搜索发现")
+                  continue
+              if line.startswith("#!desc="):
+                  patched.append("#!desc=自动同步 RuCu6 的 MyBlockAds Loon 插件；如上游包含哔哩哔哩搜索发现/默认搜索词拦截，将自动放行。")
+                  continue
+
+              if (
+                  "v2\\/search\\/square" in line
+                  and "bilibili" in line.lower()
+                  and not line.lstrip().startswith("#")
+              ):
+                  preserved = line.replace("|v2\\/search\\/square", "").replace("v2\\/search\\/square|", "")
+                  patched.append("# 保留哔哩哔哩热搜/搜索发现：注释掉 v2/search/square 拦截")
+                  patched.append("# " + line)
+                  if preserved != line:
+                      patched.append(preserved)
+                  continue
+
+              if (
+                  "Search\\/DefaultWords" in line
+                  and "bili" in line.lower()
+                  and not line.lstrip().startswith("#")
+              ):
+                  patched.append("# 保留哔哩哔哩默认搜索词")
+                  patched.append("# " + line)
+                  continue
+
+              patched.append(line)
+
+          output.write_text("\n".join(patched) + "\n", encoding="utf-8")
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          if git diff --quiet -- myblockads-bilibili-search-preserved.lpx; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add myblockads-bilibili-search-preserved.lpx
+          git commit -m "Sync Loon plugin with Bilibili search preserved"
+          git push
