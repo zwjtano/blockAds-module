@@ -33,7 +33,7 @@ jobs:
                   patched.append("#!name=广告拦截&净化合集 - 保留哔哩哔哩热搜和搜索发现")
                   continue
               if line.startswith("#!desc="):
-                  patched.append("#!desc=自动同步 fmz200/wool_scripts 的 blockAds.module，仅放行哔哩哔哩热搜、搜索发现和默认搜索词，其余规则保持上游原样。")
+                  patched.append("#!desc=自动同步 fmz200/wool_scripts 的 blockAds.module，放行哔哩哔哩热搜、搜索发现和默认搜索词，并移除 YouTube 规则。")
                   continue
               if line.startswith("#!raw-url="):
                   patched.append("#!raw-url=https://raw.githubusercontent.com/zwjtano/blockAds-module/master/blockAds-bilibili-search-preserved.module")
@@ -57,6 +57,22 @@ jobs:
               ):
                   patched.append("# 保留哔哩哔哩默认搜索词")
                   patched.append("# " + line)
+                  continue
+
+              if "youtubei.googleapis.com" in line or "*.googlevideo.com" in line:
+                  line = line.replace(", youtubei.googleapis.com", "").replace(", *.googlevideo.com", "")
+
+              if any(
+                  marker in line
+                  for marker in (
+                      "# > YouTube",
+                      "rr*.googlevideo.com",
+                      "googlevideo",
+                      "youtubei\\.googleapis\\.com",
+                      "youtube.response.js",
+                      "YouTube响应体",
+                  )
+              ):
                   continue
 
               patched.append(line)
