@@ -28,9 +28,15 @@ python scripts/convert_kelee_loon_to_surge.py --source-dir downloaded-lpx --out-
 downloaded-lpx/Block_HTTPDNS.lpx
 ```
 
-## 当前限制
+## 远程下载说明
 
-当前环境中 `https://kelee.one/Tool/Loon/Lpx/*.lpx` 返回 `403 Forbidden`，而 `https://hub.kelee.one/Tool/Loon/Lpx/*.lpx` 返回的是插件中心 HTML，不是插件本体。脚本会在报告中标记这些下载失败，避免生成错误模块。
+`https://kelee.one/Tool/Loon/Lpx/*.lpx` 会按 User-Agent 限制访问。脚本默认使用 Loon 风格 User-Agent：
+
+```text
+Loon/3.4.0 CFNetwork/1496.0.7 Darwin/23.5.0
+```
+
+不要把插件地址改成 `https://hub.kelee.one/Tool/Loon/Lpx/*.lpx`；该路径返回的是插件中心 HTML，不是插件本体。脚本会校验下载内容，避免生成错误模块。
 
 转换器会自动处理常见段落：
 
@@ -52,3 +58,13 @@ demo = type=http-response, pattern=^https:\/\/example\.com, script-path=https://
 ```
 
 复杂插件仍建议查看 `conversion-report.json` 中的 `needs-review` 项并人工抽查。
+
+## 自动同步
+
+`.github/workflows/update-kelee-loon-to-surge.yml` 会定时运行转换脚本，并更新 `generated-surge-modules/` 目录。
+
+最近一次本地转换结果：
+
+```text
+Converted: 232, needs review: 0, failed: 0
+```

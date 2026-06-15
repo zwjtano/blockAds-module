@@ -21,19 +21,16 @@ from typing import Iterable
 
 
 LIST_URL = "https://hub.kelee.one/list.json"
-USER_AGENT = (
-    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
-    "AppleWebKit/605.1.15 Loon/3.4"
-)
+USER_AGENT = "Loon/3.4.0 CFNetwork/1496.0.7 Darwin/23.5.0"
 SECTION_MAP = {
-    "Rewrite": "URL Rewrite",
-    "URL Rewrite": "URL Rewrite",
-    "Rule": "Rule",
-    "Script": "Script",
-    "MITM": "MITM",
-    "Host": "Host",
+    "rewrite": "URL Rewrite",
+    "url rewrite": "URL Rewrite",
+    "rule": "Rule",
+    "script": "Script",
+    "mitm": "MITM",
+    "host": "Host",
 }
-SCRIPT_RE = re.compile(r"^(http-request|http-response)\s+(.+?)\s+script-path=([^,]+)(.*)$")
+SCRIPT_RE = re.compile(r"^(http-request|http-response|cron|generic)\s+(.+)$")
 SAFE_NAME_RE = re.compile(r"[^A-Za-z0-9._-]+")
 
 
@@ -132,19 +129,43 @@ def script_tag(options: list[tuple[str, str | None]], fallback: str) -> tuple[st
 
 
 def convert_script_line(line: str, fallback_tag: str) -> tuple[str, str | None]:
-    match = SCRIPT_RE.match(line.strip())
+    stripped = line.strip()
+    match = SCRIPT_RE.match(stripped)
     if not match:
         return line, "Unconverted script line"
 
-    script_type, pattern, script_path, raw_options = match.groups()
-    options = parse_csv_options(raw_options)
+    script_type, payload = match.groups()
+    if "script-path=" not in payload:
+        return line, "Script line does not contain script-path"
+
+    before_script, after_script = payload.split("script-path=", 1)
+    if "," in after_script:
+        script_path, raw_options = after_script.split(",", 1)
+    else:
+        script_path, raw_options = after_script, ""
+
+    pre_options = ""
+    pattern = ""
+    if script_type in {"http-request", "http-response"}:
+        left_parts = before_script.strip().split(None, 1)
+        pattern = left_parts[0] if left_parts else ""
+        pre_options = left_parts[1] if len(left_parts) > 1 else ""
+    elif script_type == "cron":
+        left_parts = before_script.strip().split(None, 1)
+        cronexp = left_parts[0] if left_parts else ""
+        pre_options = left_parts[1] if len(left_parts) > 1 else ""
+        pattern = ""
+    else:
+        pre_options = before_script.strip()
+
+    options = parse_csv_options(",".join(part for part in (pre_options, raw_options) if part.strip()))
     tag, options = script_tag(options, fallback_tag)
-    surge_options = [
-        ("type", script_type),
-        ("pattern", pattern.strip()),
-        ("script-path", script_path.strip()),
-        *options,
-    ]
+    surge_options = [("type", script_type)]
+    if script_type in {"http-request", "http-response"}:
+        surge_options.append(("pattern", pattern.strip()))
+    elif script_type == "cron":
+        surge_options.append(("cronexp", cronexp.strip()))
+    surge_options.extend([("script-path", script_path.strip()), *options])
     return f"{tag} = {format_options(surge_options)}", None
 
 
@@ -176,7 +197,7 @@ def convert_lpx_to_surge(text: str, source_url: str, fallback_tag: str) -> Conve
         section_match = re.match(r"^\[([^\]]+)\]\s*$", line)
         if section_match:
             section = section_match.group(1).strip()
-            current_section = SECTION_MAP.get(section, section)
+            current_section = SECTION_MAP.get(section.lower(), section)
             output.append(f"[{current_section}]")
             continue
 

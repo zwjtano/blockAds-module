@@ -57,3 +57,21 @@ https://rucu6.pages.dev/Plugins/myblockads.lpx
 ```
 
 当前 Loon 上游插件本身没有包含哔哩哔哩 `v2/search/square` 或 `Search/DefaultWords` 拦截规则；工作流会保留现有规则，并在未来上游加入相关规则时自动放行哔哩哔哩热搜、搜索发现和默认搜索词。
+
+## Kelee Loon 插件转 Surge 模块
+
+`generated-surge-modules/` 目录包含从 `https://hub.kelee.one/` 插件中心批量转换得到的 Surge 模块。
+
+转换脚本：
+
+```text
+scripts/convert_kelee_loon_to_surge.py
+```
+
+说明文档：
+
+```text
+docs/loon-to-surge.md
+```
+
+转换流程由 GitHub Actions 定时同步，源 `.lpx` 插件来自 Kelee 的 Loon 插件列表。
