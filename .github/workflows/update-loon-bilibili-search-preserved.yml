@@ -33,7 +33,7 @@ jobs:
                   patched.append("#!name=MyBlockAds - 保留哔哩哔哩热搜和搜索发现")
                   continue
               if line.startswith("#!desc="):
-                  patched.append("#!desc=自动同步 RuCu6 的 MyBlockAds Loon 插件；如上游包含哔哩哔哩搜索发现/默认搜索词拦截，将自动放行。")
+                  patched.append("#!desc=自动同步 RuCu6 的 MyBlockAds Loon 插件；如上游包含哔哩哔哩搜索发现/默认搜索词拦截，将自动放行，并移除 YouTube 规则。")
                   continue
 
               if (
@@ -55,6 +55,22 @@ jobs:
               ):
                   patched.append("# 保留哔哩哔哩默认搜索词")
                   patched.append("# " + line)
+                  continue
+
+              if "youtubei.googleapis.com" in line or "*.googlevideo.com" in line:
+                  line = line.replace(", youtubei.googleapis.com", "").replace(", *.googlevideo.com", "")
+
+              if any(
+                  marker in line
+                  for marker in (
+                      "# > YouTube",
+                      "rr*.googlevideo.com",
+                      "googlevideo",
+                      "youtubei\\.googleapis\\.com",
+                      "youtube.response.js",
+                      "YouTube响应体",
+                  )
+              ):
                   continue
 
               patched.append(line)
