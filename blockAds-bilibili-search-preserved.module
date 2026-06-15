@@ -3971,6 +3971,7 @@ https://.+\.gamersky.com/v1/statisticAd data-type=text data="{}" status-code=200
 # > 有兔阅读(米兔)
 ^https?:\/\/app\.zhoudamozi\.com\/ad\/.+ data-type=text data=" " status-code=200
 
+# 播放页广告
 
 # > 悠洗APP
 # hostname = api.ulife.group
@@ -4886,6 +4887,7 @@ usmile = type=http-response, pattern=^https?:\/\/www\.myusmile\.online\/user\/pl
 
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
+# 响应体
 
 # > 悠洗APP
 悠洗APP = type=http-response, pattern=^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js, requires-body=true, timeout=60
