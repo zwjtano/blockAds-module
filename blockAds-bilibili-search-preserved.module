@@ -1,5 +1,5 @@
 #!name=广告拦截&净化合集 - 保留哔哩哔哩热搜和搜索发现
-#!desc=自动同步 fmz200/wool_scripts 的 blockAds.module，仅放行哔哩哔哩热搜、搜索发现和默认搜索词，其余规则保持上游原样。
+#!desc=自动同步 fmz200/wool_scripts 的 blockAds.module，放行哔哩哔哩热搜、搜索发现和默认搜索词，并移除 YouTube 规则。
 #!author=奶思[https://github.com/fmz200]
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png
 #!category=奶思的模块
