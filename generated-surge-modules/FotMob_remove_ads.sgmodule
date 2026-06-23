@@ -1,0 +1,11 @@
+#!name=FotMob Ads Block
+#!desc=Block FotMob ad and ad SDK domains found from Surge packet captures.
+#!author=Codex
+#!category=zwjtano
+#!homepage=https://example.com
+
+[Rule]
+DOMAIN-SUFFIX,inner-active.mobi,REJECT
+DOMAIN,pub.fotmob.com,REJECT
+DOMAIN,c.amazon-adsystem.com,REJECT
+DOMAIN,googleads.g.doubleclick-cn.net,REJECT
