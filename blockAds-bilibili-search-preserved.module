@@ -2,7 +2,7 @@
 #!desc=自动同步 fmz200/wool_scripts 的 blockAds.module，合并 Kelee 最新哔哩去广告规则，放行哔哩哔哩热搜、搜索发现和默认搜索词，并移除 YouTube 规则。
 #!author=奶思[https://github.com/fmz200]
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png
-#!category=奶思的模块
+#!category=zwjtano
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://raw.githubusercontent.com/zwjtano/blockAds-module/master/blockAds-bilibili-search-preserved.module
 #!tg-channel=https://t.me/inaisi

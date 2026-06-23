@@ -77,6 +77,9 @@ def patch_header(lines: list[str]) -> list[str]:
         if line.startswith("#!raw-url="):
             output.append(f"#!raw-url={OUTPUT_URL}")
             continue
+        if line.startswith("#!category="):
+            output.append("#!category=zwjtano")
+            continue
         if line.startswith("#!arguments="):
             saw_arguments = True
             output.append(merge_arguments(line))
