@@ -32,13 +32,14 @@ https://rucu6.pages.dev/Plugins/myblockads.lpx
 https://raw.githubusercontent.com/zwjtano/blockAds-module/master/blockAds-bilibili-search-preserved.module
 ```
 
-这个文件由 GitHub Actions 自动同步上游：
+这个文件由 GitHub Actions 自动同步上游，并合并 Kelee 最新哔哩哔哩去广告 Surge 模块：
 
 ```text
 https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/blockAds.module
+https://raw.githubusercontent.com/zwjtano/kelee-loon-surge-modules/master/modules/Bilibili_remove_ads.sgmodule
 ```
 
-同步时只放行哔哩哔哩热搜、搜索发现和默认搜索词，其余规则保持上游原样。
+同步时以 Kelee 哔哩规则为主体替换大合集里的哔哩区块，并放行哔哩哔哩热搜、搜索发现和默认搜索词；其余非哔哩规则尽量保持 fmz200 上游原样。
 
 说明：Surge 模块规则是合并生效的，单独写一个补丁模块通常不能删除另一个模块里的 `[Map Local]` 拦截规则。因此要保留这些内容，需要订阅这个自动同步后的派生模块，而不是同时订阅上游模块和补丁模块。
 
