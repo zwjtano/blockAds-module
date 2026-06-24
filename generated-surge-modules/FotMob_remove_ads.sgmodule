@@ -8,6 +8,7 @@
 DOMAIN-SUFFIX,inner-active.mobi,REJECT
 DOMAIN,pub.fotmob.com,REJECT
 DOMAIN,pub2.fotmob.com,REJECT
-DOMAIN,c.amazon-adsystem.com,REJECT
-DOMAIN,prod.tahoe-analytics.publishers.advertising.a2z.com,REJECT
+DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+DOMAIN-SUFFIX,advertising.a2z.com,REJECT
+DOMAIN-SUFFIX,appsflyersdk.com,REJECT
 DOMAIN,googleads.g.doubleclick-cn.net,REJECT
