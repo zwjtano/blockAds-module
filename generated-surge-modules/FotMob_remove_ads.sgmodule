@@ -1,5 +1,5 @@
 #!name=FotMob Ads Block
-#!desc=Block FotMob house ads and ad network resources identified from Surge HTTP capture.
+#!desc=拦截 FotMob 自家广告图与抓包识别到的广告网络资源。
 #!author=Codex
 #!category=zwjtano
 #!homepage=https://github.com/zwjtano/blockAds-module
