@@ -1,0 +1,29 @@
+#!name=FotMob Ads Block
+#!desc=Block FotMob house ads and ad network resources identified from Surge HTTP capture.
+#!author=Codex
+#!category=zwjtano
+#!homepage=https://github.com/zwjtano/blockAds-module
+
+[Map Local]
+^https:\/\/images\.fotmob\.com\/image_resources\/house-ads\/.* data-type=tiny-gif status-code=200
+^https:\/\/live-tag\.creatopy\.net\/designs\/.*\/embed\/dfp_google_a_m\/media\/.*\.(png|jpg|jpeg|webp|gif) data-type=tiny-gif status-code=200
+
+[URL Rewrite]
+^https:\/\/live-tag\.creatopy\.net\/.* - reject
+^https:\/\/pub\.fotmob\.com\/sync\/storage\/google\/.* - reject
+^https:\/\/fotmobas-fotmobsoccerlivescores\.adsbynimbus\.com\/.* - reject
+
+[Rule]
+DOMAIN-SUFFIX,inner-active.mobi,REJECT
+DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+DOMAIN-SUFFIX,advertising.a2z.com,REJECT
+DOMAIN-SUFFIX,adsbynimbus.com,REJECT
+DOMAIN-SUFFIX,dsp-api.moloco.com,REJECT
+DOMAIN-SUFFIX,ads.vungle.com,REJECT
+DOMAIN-SUFFIX,appsflyersdk.com,REJECT
+DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
+DOMAIN-SUFFIX,googlesyndication-cn.com,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+
+[MITM]
+hostname = %APPEND% images.fotmob.com, live-tag.creatopy.net, pub.fotmob.com, fotmobas-fotmobsoccerlivescores.adsbynimbus.com
