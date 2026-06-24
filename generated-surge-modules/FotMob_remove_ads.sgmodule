@@ -4,6 +4,10 @@
 #!category=zwjtano
 #!homepage=https://example.com
 
+[Map Local]
+^https:\/\/pub\.fotmob\.com\/.* data-type=tiny-gif status-code=200
+^https:\/\/pub2\.fotmob\.com\/.* data-type=tiny-gif status-code=200
+
 [Rule]
 DOMAIN-SUFFIX,inner-active.mobi,REJECT
 DOMAIN,pub.fotmob.com,REJECT
@@ -12,3 +16,6 @@ DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
 DOMAIN-SUFFIX,advertising.a2z.com,REJECT
 DOMAIN-SUFFIX,appsflyersdk.com,REJECT
 DOMAIN,googleads.g.doubleclick-cn.net,REJECT
+
+[MITM]
+hostname = %APPEND% pub.fotmob.com, pub2.fotmob.com
