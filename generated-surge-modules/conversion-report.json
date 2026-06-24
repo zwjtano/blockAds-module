@@ -154,6 +154,13 @@
     "warnings": []
   },
   {
+    "name": "Hong Kong Toolbar去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/HongKongToolbar_remove_ads.lpx",
+    "output": "generated-surge-modules/HongKongToolbar_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "IPA工具箱助手",
     "source": "https://kelee.one/Tool/Loon/Lpx/IPATool.lpx",
     "output": "generated-surge-modules/IPATool.sgmodule",

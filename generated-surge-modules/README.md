@@ -22,6 +22,7 @@
 - [Foodie去广告](Foodie_remove_ads.sgmodule)
 - [GitHub加速](Switch_github_mirror.sgmodule)
 - [Google搜索重定向](Google.sgmodule)
+- [Hong Kong Toolbar去广告](HongKongToolbar_remove_ads.sgmodule)
 - [IPA工具箱助手](IPATool.sgmodule)
 - [IT之家去广告](IThome_remove_ads.sgmodule)
 - [Jump去广告](Jump_remove_ads.sgmodule)
