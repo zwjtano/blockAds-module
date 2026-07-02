@@ -119,6 +119,13 @@
     "warnings": []
   },
   {
+    "name": "e充电去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/EasyCharge_remove_ads.lpx",
+    "output": "generated-surge-modules/EasyCharge_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "Fileball网盘挂载",
     "source": "https://kelee.one/Tool/Loon/Lpx/Fileball_mount.lpx",
     "output": "generated-surge-modules/Fileball_mount.sgmodule",
@@ -833,6 +840,13 @@
     "warnings": []
   },
   {
+    "name": "看家王去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/ChatCam_remove_ads.lpx",
+    "output": "generated-surge-modules/ChatCam_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "可莉广告过滤器",
     "source": "https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx",
     "output": "generated-surge-modules/Remove_ads_by_keli.sgmodule",
@@ -990,6 +1004,13 @@
     "name": "美丽修行去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Meizhixiuxing_remove_ads.lpx",
     "output": "generated-surge-modules/Meizhixiuxing_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "name": "每日赛车去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx",
+    "output": "generated-surge-modules/MeiRiSaiChe_remove_ads.sgmodule",
     "status": "ok",
     "warnings": []
   },
@@ -1256,6 +1277,13 @@
     "name": "天猫校园去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/TmallCampus_remove_ads.lpx",
     "output": "generated-surge-modules/TmallCampus_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "name": "天气通去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/TianQiTong_remove_ads.lpx",
+    "output": "generated-surge-modules/TianQiTong_remove_ads.sgmodule",
     "status": "ok",
     "warnings": []
   },
