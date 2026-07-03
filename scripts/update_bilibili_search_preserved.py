@@ -12,7 +12,7 @@ from pathlib import Path
 
 FMZ_BLOCKADS_URL = "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/blockAds.module"
 KELEE_BILIBILI_URL = "https://raw.githubusercontent.com/zwjtano/kelee-loon-surge-modules/master/modules/Bilibili_remove_ads.sgmodule"
-OUTPUT_URL = "https://raw.githubusercontent.com/zwjtano/blockAds-module/master/blockAds-bilibili-search-preserved.module"
+OUTPUT_URL = "https://raw.githubusercontent.com/zwjtano/blockAds-module/master/surge-modules/blockAds-bilibili-search-preserved.module"
 
 BILIBILI_ARGUMENTS = [
     'displayUpList:"show"',
@@ -238,6 +238,7 @@ def render_module(header: list[str], sections: OrderedDict[str, list[str]]) -> s
 
 
 def generate(output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     blockads = fetch_text(FMZ_BLOCKADS_URL)
     kelee = fetch_text(KELEE_BILIBILI_URL)
     header, sections = split_module(blockads)
@@ -253,7 +254,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("blockAds-bilibili-search-preserved.module"),
+        default=Path("surge-modules/blockAds-bilibili-search-preserved.module"),
         help="Path to write the generated Surge module.",
     )
     args = parser.parse_args()

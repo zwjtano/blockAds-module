@@ -5,21 +5,21 @@
 ## 基本用法
 
 ```bash
-python scripts/convert_kelee_loon_to_surge.py --out-dir generated-surge-modules
+python scripts/convert_kelee_loon_to_surge.py --out-dir surge-modules
 ```
 
 脚本会生成：
 
-- `generated-surge-modules/*.sgmodule`
-- `generated-surge-modules/README.md`
-- `generated-surge-modules/conversion-report.json`
+- `surge-modules/*.sgmodule`
+- `surge-modules/README.md`
+- `surge-modules/conversion-report.json`
 
 ## 使用本地 Loon 插件源
 
 如果远程 `.lpx` 源地址无法直接下载，可以先把 `.lpx` 文件放进一个目录，文件名保持和列表 URL 一致，再运行：
 
 ```bash
-python scripts/convert_kelee_loon_to_surge.py --source-dir downloaded-lpx --out-dir generated-surge-modules
+python scripts/convert_kelee_loon_to_surge.py --source-dir downloaded-lpx --out-dir surge-modules
 ```
 
 例如列表中的 `https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx`，本地文件应为：
@@ -61,7 +61,7 @@ demo = type=http-response, pattern=^https:\/\/example\.com, script-path=https://
 
 ## 自动同步
 
-`.github/workflows/update-kelee-loon-to-surge.yml` 会定时运行转换脚本，并更新 `generated-surge-modules/` 目录。
+`.github/workflows/update-kelee-loon-to-surge.yml` 会定时运行转换脚本，并更新 `surge-modules/` 目录。
 
 最近一次本地转换结果：
 

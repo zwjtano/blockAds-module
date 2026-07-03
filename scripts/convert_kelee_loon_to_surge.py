@@ -269,7 +269,7 @@ def write_index(out_dir: Path, converted: list[dict[str, str]]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--list-url", default=LIST_URL)
-    parser.add_argument("--out-dir", default="generated-surge-modules")
+    parser.add_argument("--out-dir", default="surge-modules")
     parser.add_argument("--source-dir", help="Optional directory containing downloaded .lpx files")
     parser.add_argument("--limit", type=int, help="Convert only the first N plugins")
     parser.add_argument("--timeout", type=int, default=30)

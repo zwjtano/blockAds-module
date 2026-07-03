@@ -22,7 +22,8 @@ jobs:
           from urllib.request import urlopen
 
           upstream = "https://rucu6.pages.dev/Plugins/myblockads.lpx"
-          output = Path("myblockads-bilibili-search-preserved.lpx")
+          output = Path("loon-plugins/myblockads-bilibili-search-preserved.lpx")
+          output.parent.mkdir(parents=True, exist_ok=True)
 
           text = urlopen(upstream, timeout=60).read().decode("utf-8")
           lines = text.splitlines()
@@ -80,12 +81,12 @@ jobs:
       - name: Commit changes
         shell: bash
         run: |
-          if git diff --quiet -- myblockads-bilibili-search-preserved.lpx; then
+          if git diff --quiet -- loon-plugins/myblockads-bilibili-search-preserved.lpx; then
             echo "No changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add myblockads-bilibili-search-preserved.lpx
+          git add loon-plugins/myblockads-bilibili-search-preserved.lpx
           git commit -m "Sync Loon plugin with Bilibili search preserved"
           git push
