@@ -79,6 +79,7 @@
 - [彩云天气去广告](ColorfulClouds_remove_ads.sgmodule)
 - [测测去广告](Cece_remove_ads.sgmodule)
 - [超级课程表去广告](MyFriday_remove_ads.sgmodule)
+- [车来了去广告](Chelaile_remove_ads.sgmodule)
 - [成分喵去广告](ChengFenMiao_remove_ads.sgmodule)
 - [创维智慧云去广告](SkyworthDigitalPicamera_remove_ads.sgmodule)
 - [触站去广告](Chuzhan_remove_ads.sgmodule)
