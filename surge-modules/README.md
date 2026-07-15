@@ -110,6 +110,7 @@
 - [稿定设计去广告](GaoDing_remove_ads.sgmodule)
 - [海雀去广告](AlcidaeVideo_remove_ads.sgmodule)
 - [航旅纵横去广告](Umetrip_remove_ads.sgmodule)
+- [好轻去广告](YunmaiScale_remove_ads.sgmodule)
 - [盒马去广告](MrHema_remove_ads.sgmodule)
 - [华尔街见闻去广告](FinanceNews_remove_ads.sgmodule)
 - [华住会去广告](HantingHotels_remove_ads.sgmodule)
