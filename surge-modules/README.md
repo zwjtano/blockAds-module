@@ -21,7 +21,6 @@
 - [Fileball网盘挂载](Fileball_mount.sgmodule)
 - [Follow每日签到](FollowRSS_checkin.sgmodule)
 - [Foodie去广告](Foodie_remove_ads.sgmodule)
-- [GitHub加速](Switch_github_mirror.sgmodule)
 - [Google搜索重定向](Google.sgmodule)
 - [Hong Kong Toolbar去广告](HongKongToolbar_remove_ads.sgmodule)
 - [IPA工具箱助手](IPATool.sgmodule)
