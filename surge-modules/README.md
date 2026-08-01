@@ -95,6 +95,7 @@
 - [豆瓣阅读去广告](DoubanRead_remove_ads.sgmodule)
 - [斗鱼去广告](Douyu_remove_ads.sgmodule)
 - [堆糖去广告](DuiTang_remove_ads.sgmodule)
+- [多屏互动去广告](TCLnScreen_remove_ads.sgmodule)
 - [番茄小说去广告](DragonRead_remove_ads.sgmodule)
 - [帆书去广告](KebidaDushu_remove_ads.sgmodule)
 - [飞客去广告](FlyerTea_remove_ads.sgmodule)
