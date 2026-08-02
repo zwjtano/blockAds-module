@@ -42,6 +42,7 @@
 - [Spotify去广告](Spotify_remove_ads.sgmodule)
 - [Spotify歌词增强](Spotify_lyrics_translation.sgmodule)
 - [Sub-Store](Sub-Store.sgmodule)
+- [Telegram重定向](TelegramRedirect.sgmodule)
 - [TeraBox去广告](TeraBox_remove_ads.sgmodule)
 - [TestFlight地区解锁](TestFlightRegionUnlock.sgmodule)
 - [TubeMax去广告](TubeMax_remove_ads.sgmodule)
