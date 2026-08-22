@@ -91,6 +91,13 @@
     "warnings": []
   },
   {
+    "name": "DJ多多去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx",
+    "output": "surge-modules/DjDuoDuo_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "Dlabel云标签去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Dlabel_remove_ads.lpx",
     "output": "surge-modules/Dlabel_remove_ads.sgmodule",
@@ -262,6 +269,13 @@
     "name": "Script-Hub",
     "source": "https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx",
     "output": "surge-modules/Script-Hub.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "name": "Sofascore去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/Sofascore_remove_ads.lpx",
+    "output": "surge-modules/Sofascore_remove_ads.sgmodule",
     "status": "ok",
     "warnings": []
   },

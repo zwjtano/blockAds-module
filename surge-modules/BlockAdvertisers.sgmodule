@@ -9,7 +9,7 @@
 #!system_version=
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
-#!date=2026-07-12 23:46:27
+#!date=2026-08-22 10:20:51
 
 [Rule]
 DOMAIN-KEYWORD, adstrategy, REJECT
@@ -331,6 +331,7 @@ DOMAIN-SUFFIX, xdplt.com, REJECT
 DOMAIN, ads.cup.com.cn, REJECT
 
 DOMAIN-SUFFIX, adjust.com, REJECT
+DOMAIN-SUFFIX, adjust.io, REJECT
 DOMAIN-SUFFIX, adjust.net.in, REJECT
 
 DOMAIN, app-analytics-services.com, REJECT
