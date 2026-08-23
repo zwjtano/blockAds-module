@@ -784,6 +784,13 @@
     "warnings": []
   },
   {
+    "name": "哈罗去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx",
+    "output": "surge-modules/EasyBike_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "航旅纵横去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx",
     "output": "surge-modules/Umetrip_remove_ads.sgmodule",
@@ -1151,6 +1158,13 @@
     "name": "摩天轮去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/FerrisWheel_remove_ads.lpx",
     "output": "surge-modules/FerrisWheel_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "name": "摩托范去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx",
+    "output": "surge-modules/MotorFans_remove_ads.sgmodule",
     "status": "ok",
     "warnings": []
   },
