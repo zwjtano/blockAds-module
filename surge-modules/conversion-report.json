@@ -21,6 +21,13 @@
     "warnings": []
   },
   {
+    "name": "5EPlay去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/5EPlay_remove_ads.lpx",
+    "output": "surge-modules/5EPlay_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "36氪去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/36Kr_remove_ads.lpx",
     "output": "surge-modules/36Kr_remove_ads.sgmodule",
@@ -906,6 +913,13 @@
     "name": "金山文档去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/WPS_Documents_remove_ads.lpx",
     "output": "surge-modules/WPS_Documents_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
+    "name": "金十数据去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/Jin10Data_remove_ads.lpx",
+    "output": "surge-modules/Jin10Data_remove_ads.sgmodule",
     "status": "ok",
     "warnings": []
   },
