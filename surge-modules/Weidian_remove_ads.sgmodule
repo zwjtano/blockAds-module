@@ -1,0 +1,46 @@
+#!name=微店去广告 - Surge
+#!desc=移除开屏广告、弹窗广告、猜你喜欢、猜你想搜、关注推荐，精简搜索页和我的页面。；由 Loon 插件自动转换为 Surge 模块，建议导入前抽查。
+#!homepage=https://kelee.one/Tool/Loon/Lpx/Weidian_remove_ads.lpx
+#!system=ios
+#!openUrl=https://apps.apple.com/app/id860384719
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag=去广告
+#!system=
+#!system_version=
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weidian.png
+#!date=2026-08-26 07:17:57
+
+[URL Rewrite]
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/ares\/home\.splash\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/warlock\/recommend\.guessULike\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/poseidon\/exhibit\.spaceJson\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/ares\/app\.dialog\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/warlock\/recommend\.guessULike\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/feedserver\/feed\.similarRecFeeds\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/faith\/search\.hotRecShadowWord\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/faith\/search\.getProcessTopics\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/feedserver\/feed\.listGoodUsers\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/feedserver\/feed\.myFollow\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/ares\/recommend\.getSpecialFocusList\//i then reject_dict(200)
+
+request if ${url} ~= /^https:\/\/thor\.weidian\.com\/ares\/collect\.recommendShop\//i then reject_dict(200)
+
+[Script]
+配置修改 = type=http-response, pattern=^https:\/\/thor\.weidian\.com\/appconf\/getAppConfig\/, script-path=https://kelee.one/Resource/JavaScript/Weidian/getAppConfig.js, requires-body=true, binary-body-mode=true
+
+精简钱包区 = type=http-response, pattern=^https:\/\/thor\.weidian\.com\/wgs\/wallet\.query\.order\.entrance\/, script-path=https://kelee.one/Resource/JavaScript/Weidian/wallet.js, requires-body=true, binary-body-mode=true
+
+
+[MITM]
+hostname = %APPEND% thor.weidian.com
