@@ -1,5 +1,5 @@
 #!name=金十数据去广告 - Surge
-#!desc=移除开屏广告、侧滑页面广告、消息广告、浮窗广告、横幅广告、信息流广告、弹窗广告，精简侧滑页面。；由 Loon 插件自动转换为 Surge 模块，建议导入前抽查。
+#!desc=移除开屏广告、侧滑页面广告、消息广告、浮窗广告、横幅广告、信息流广告、弹窗广告。；由 Loon 插件自动转换为 Surge 模块，建议导入前抽查。
 #!homepage=https://kelee.one/Tool/Loon/Lpx/Jin10Data_remove_ads.lpx
 #!system=ios
 #!openUrl=https://apps.apple.com/app/id901284508
@@ -9,7 +9,7 @@
 #!system_version=
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Jin10Data.png
-#!date=2026-08-24 06:35:29
+#!date=2026-08-27 06:29:33
 
 [URL Rewrite]
 ^https:\/\/jad-api\.jin10\.com\/ad\d\/ reject-dict
@@ -20,6 +20,8 @@
 ^https:\/\/cdn\.jin10\.com\/json\/index\/hits_rank\.json\? reject-dict
 
 ^https:\/\/[0-9a-z]+\.z3c\.jin10\.com\/api\/home\/search\/hot$ reject-dict
+
+^https:\/\/jad-api\.jin10\.com\/mult\/list_unread\? reject-dict
 
 [MITM]
 hostname = %APPEND% jad-api.jin10.com, common-open-api.jin10.com, search-open-api.jin10.com, cdn.jin10.com, *.z3c.jin10.com

@@ -224,6 +224,13 @@
     "warnings": []
   },
   {
+    "name": "PICOOC去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/PICOOC_remove_ads.lpx",
+    "output": "surge-modules/PICOOC_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "Pinterest去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
     "output": "surge-modules/Pinterest_remove_ads.sgmodule",
@@ -1501,8 +1508,11 @@
     "name": "微店去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Weidian_remove_ads.lpx",
     "output": "surge-modules/Weidian_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 39: Unconverted script line: response if ${url} ~= /^https:\\/\\/thor\\.weidian\\.com\\/appconf\\/getAppConfig\\//i then script(\"https://kelee.one/Resource/JavaScript/Weidian/getAppConfig.js\") with tag=\"配置修改\", requires_body=true, binary_body_mode=true",
+      "line 41: Unconverted script line: response if ${url} ~= /^https:\\/\\/thor\\.weidian\\.com\\/wgs\\/wallet\\.query\\.order\\.entrance\\//i then script(\"https://kelee.one/Resource/JavaScript/Weidian/wallet.js\") with tag=\"精简钱包区\", requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "威锋去广告",
@@ -1881,6 +1891,17 @@
     "output": "surge-modules/ZongHeng_remove_ads.sgmodule",
     "status": "ok",
     "warnings": []
+  },
+  {
+    "name": "最美壁纸去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/iWallBiZhi_remove_ads.lpx",
+    "output": "surge-modules/iWallBiZhi_remove_ads.sgmodule",
+    "status": "needs-review",
+    "warnings": [
+      "line 19: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?/i then script(\"https://kelee.one/Resource/JavaScript/iWallBiZhi/core_initialize.js\") with tag=\"移除首页广告配置\", requires_body=true",
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?/i then script(\"https://kelee.one/Resource/JavaScript/iWallBiZhi/landing_initialize.js\") with tag=\"移除首页轮播图广告\", requires_body=true",
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?/i then script(\"https://kelee.one/Resource/JavaScript/iWallBiZhi/landing.js\") with tag=\"移除头像页横幅跳转\", requires_body=true"
+    ]
   },
   {
     "name": "最右去广告",

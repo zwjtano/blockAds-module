@@ -32,6 +32,7 @@
 - [KOOK去广告](KOOK_remove_ads.sgmodule)
 - [Line去广告](Line_remove_ads.sgmodule)
 - [OKOK去广告](OKOK_remove_ads.sgmodule)
+- [PICOOC去广告](PICOOC_remove_ads.sgmodule)
 - [Pinterest去广告](Pinterest_remove_ads.sgmodule)
 - [QQ链接解锁](QQ_Redirect.sgmodule)
 - [QQ音乐去广告](QQMusic_remove_ads.sgmodule)
@@ -269,4 +270,5 @@
 - [转转去广告](ZhuanZhuan_remove_ads.sgmodule)
 - [自动加入TestFlight](Auto_Join_TF.sgmodule)
 - [纵横小说去广告](ZongHeng_remove_ads.sgmodule)
+- [最美壁纸去广告](iWallBiZhi_remove_ads.sgmodule)
 - [最右去广告](ZuiYou_remove_ads.sgmodule)
