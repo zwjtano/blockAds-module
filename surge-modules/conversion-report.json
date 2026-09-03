@@ -532,6 +532,16 @@
     "warnings": []
   },
   {
+    "name": "比心去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/Bixin_remove_ads.lpx",
+    "output": "surge-modules/Bixin_remove_ads.sgmodule",
+    "status": "needs-review",
+    "warnings": [
+      "line 46: Unconverted script line: response if ${url} ~= /^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$/i then script(\"https://kelee.one/Resource/JavaScript/Bixin/common_tab.js\") with tag=\"精简首页标签\", requires_body=true",
+      "line 48: Unconverted script line: response if ${url} ~= /^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$/i then script(\"https://kelee.one/Resource/JavaScript/Bixin/my_page.js\") with tag=\"精简我的页面\", requires_body=true"
+    ]
+  },
+  {
     "name": "波点音乐去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx",
     "output": "surge-modules/BodianMusic_remove_ads.sgmodule",
@@ -658,7 +668,7 @@
     "warnings": []
   },
   {
-    "name": "滴滴出行去广告",
+    "name": "滴滴去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx",
     "output": "surge-modules/DiDi_remove_ads.sgmodule",
     "status": "ok",
