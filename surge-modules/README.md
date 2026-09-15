@@ -136,6 +136,7 @@
 - [金十数据去广告](Jin10Data_remove_ads.sgmodule)
 - [看家王去广告](ChatCam_remove_ads.sgmodule)
 - [可莉广告过滤器](Remove_ads_by_keli.sgmodule)
+- [口袋壁纸去广告](ShoujiDesk_remove_ads.sgmodule)
 - [快递100去广告](KuaiDi100_remove_ads.sgmodule)
 - [快对去广告](KuaiDuiZuoYe_remove_ads.sgmodule)
 - [快捷搜索](QuickSearch.sgmodule)
