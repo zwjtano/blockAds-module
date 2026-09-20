@@ -1328,6 +1328,13 @@
     "warnings": []
   },
   {
+    "name": "闪动校园去广告",
+    "source": "https://kelee.one/Tool/Loon/Lpx/ShandongSchool_remove_ads.lpx",
+    "output": "surge-modules/ShandongSchool_remove_ads.sgmodule",
+    "status": "ok",
+    "warnings": []
+  },
+  {
     "name": "省钱快报去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/YueDanBa_remove_ads.lpx",
     "output": "surge-modules/YueDanBa_remove_ads.sgmodule",

@@ -189,6 +189,7 @@
 - [启信宝去广告](QiXinBao_remove_ads.sgmodule)
 - [全民K歌去广告](QQKSong_remove_ads.sgmodule)
 - [瑞幸咖啡去广告](LuckinCoffee_remove_ads.sgmodule)
+- [闪动校园去广告](ShandongSchool_remove_ads.sgmodule)
 - [省钱快报去广告](YueDanBa_remove_ads.sgmodule)
 - [什么值得买去广告](smzdm_remove_ads.sgmodule)
 - [收银通商户端去广告](ShouYinTongMerchant_remove_ads.sgmodule)
