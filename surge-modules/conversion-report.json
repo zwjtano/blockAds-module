@@ -17,8 +17,13 @@
     "name": "1.1.1.1配置管理",
     "source": "https://kelee.one/Tool/Loon/Lpx/1.1.1.1.lpx",
     "output": "surge-modules/1.1.1.1.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: request if ${url} ~= /^https?:\\/\\/(api|zero-trust-client)\\.cloudflareclient\\.com\\/(.*)\\/reg\\/[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i then script(\"https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.request.js\") with tag=\"WARP Personal Request\", requires_body=true",
+      "line 15: Unconverted script line: response if ${url} ~= /^https?:\\/\\/(api|zero-trust-client)\\.cloudflareclient\\.com\\/(.*)\\/reg\\/[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i then script(\"https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.response.js\") with tag=\"WARP Personal Response\", requires_body=true",
+      "line 16: Unconverted script line: request if ${url} ~= /^https?:\\/\\/(api|zero-trust-client)\\.cloudflareclient\\.com\\/(.*)\\/reg\\/t\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i then script(\"https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.request.js\") with tag=\"WARP Teams Request\", requires_body=true",
+      "line 17: Unconverted script line: response if ${url} ~= /^https?:\\/\\/(api|zero-trust-client)\\.cloudflareclient\\.com\\/(.*)\\/reg\\/t\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i then script(\"https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.response.js\") with tag=\"WARP Teams Response\", requires_body=true"
+    ]
   },
   {
     "name": "5EPlay去广告",
@@ -66,15 +71,20 @@
     "name": "12306去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx",
     "output": "surge-modules/12306_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 21: Unconverted script line: request if ${url} ~= /^https:\\/\\/mobile\\.12306\\.cn\\/otsmobile\\/app\\/mgs\\/mgw\\.htm$/i then script(\"https://kelee.one/Resource/JavaScript/12306/12306_remove_ads.js\") with tag=\"移除12306应用内广告\""
+    ]
   },
   {
     "name": "Apple天气增强",
     "source": "https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx",
     "output": "surge-modules/AppleWeatherEnhancer.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 31: Unconverted script line: response if ${url} ~= /^https?:\\/\\/weatherkit\\.apple\\.com\\/api\\/v1\\/availability\\//i then script(\"https://github.com/NSRingo/WeatherKit/releases/download/v3.1.0/response.bundle.js\", {${Weather.Provider}, ${NextHour.Provider}, ${AirQuality.Calculate.Algorithm}, ${API.ColorfulClouds.Token}, ${API.QWeather.Host}, ${API.QWeather.Token}, ${API.WAQI.Token}, ${Storage}, ${LogLevel}}) with tag=\"天气可用性响应\", requires_body=true",
+      "line 33: Unconverted script line: response if ${url} ~= /^https?:\\/\\/weatherkit\\.apple\\.com\\/api\\/v2\\/weather\\//i then script(\"https://github.com/NSRingo/WeatherKit/releases/download/v3.1.0/response.bundle.js\", {${Weather.Provider}, ${NextHour.Provider}, ${AirQuality.Calculate.Algorithm}, ${API.ColorfulClouds.Token}, ${API.QWeather.Host}, ${API.QWeather.Token}, ${API.WAQI.Token}, ${Storage}, ${LogLevel}}) with tag=\"天气响应\", requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "B612咔叽去广告",
@@ -87,8 +97,10 @@
     "name": "BoxJs",
     "source": "https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx",
     "output": "surge-modules/BoxJs.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 17: Unconverted script line: request if ${url} ~= /^https?:\\/\\/(.+\\.)?boxjs\\.(com|net)/i then script(\"https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js\") with tag=\"BoxJS\", timeout=120, requires_body=true"
+    ]
   },
   {
     "name": "CC直播去广告",
@@ -101,8 +113,10 @@
     "name": "DJ多多去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx",
     "output": "surge-modules/DjDuoDuo_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?/i then script(\"https://kelee.one/Resource/JavaScript/DjDuoDuo/DjDuoDuo_remove_ads.js\") with tag=\"去广告\", requires_body=true"
+    ]
   },
   {
     "name": "Dlabel云标签去广告",
@@ -143,15 +157,19 @@
     "name": "Fileball网盘挂载",
     "source": "https://kelee.one/Tool/Loon/Lpx/Fileball_mount.lpx",
     "output": "surge-modules/Fileball_mount.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: request if ${url} ~= /^http:\\/\\/(aliyun|quark|pikpak)\\.example\\.com/i then script(\"https://kelee.one/Resource/JavaScript/Fileball/Fileball_mount.js\") with tag=\"三合一网盘挂载\", requires_body=true"
+    ]
   },
   {
     "name": "Follow每日签到",
     "source": "https://kelee.one/Tool/Loon/Lpx/FollowRSS_checkin.lpx",
     "output": "surge-modules/FollowRSS_checkin.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 19: Script line does not contain script-path: cron ${cron} then script(\"https://kelee.one/Resource/JavaScript/FollowRSS/FollowRSS_checkin.js\", {${token}, ${cookie}}) with tag=\"Follow每日签到\", timeout=120"
+    ]
   },
   {
     "name": "Foodie去广告",
@@ -178,15 +196,20 @@
     "name": "IPA工具箱助手",
     "source": "https://kelee.one/Tool/Loon/Lpx/IPATool.lpx",
     "output": "surge-modules/IPATool.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: request if ${url} ~= /^https:\\/\\/apple-api\\.com/i then script(\"https://kelee.one/Resource/JavaScript/IPATool/AppStoreAPI.js\") with tag=\"App Store API\", requires_body=true",
+      "line 16: Unconverted script line: request if ${url} ~= /^https:\\/\\/xiaobai\\.app/i then script(\"https://kelee.one/Resource/JavaScript/IPATool/Installer.js\") with tag=\"安装器\""
+    ]
   },
   {
     "name": "IT之家去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/IThome_remove_ads.lpx",
     "output": "surge-modules/IThome_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/napi\\.ithome\\.com\\/api\\/(news\\/indexv2\\/iphone\\/\\d+|topmenu\\/getfeeds\\?)/i then script(\"https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js\", {${removeAllBanners}, ${removePinnedArticles}}) with tag=\"IT之家去广告\", requires_body=true"
+    ]
   },
   {
     "name": "Jump去广告",
@@ -283,8 +306,13 @@
     "name": "Script-Hub",
     "source": "https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx",
     "output": "surge-modules/Script-Hub.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 20: Unconverted script line: request if ${url} ~= /^https?:\\/\\/script\\.hub\\/($|edit\\/|reload)/i then script(\"https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js\") with tag=\"前端界面\", timeout=300",
+      "line 22: Unconverted script line: request if ${url} ~= /^https?:\\/\\/script\\.hub\\/file\\/_start_\\/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module)/i then script(\"https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js\") with tag=\"Rewrite转换\", timeout=300",
+      "line 24: Unconverted script line: request if ${url} ~= /^https?:\\/\\/script\\.hub\\/file\\/_start_\\/.+type=rule-set/i then script(\"https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js\") with tag=\"Rule转换\", timeout=300",
+      "line 26: Unconverted script line: request if ${url} ~= /^https?:\\/\\/script\\.hub\\/convert\\//i then script(\"https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js\") with tag=\"JavaScript转换\", timeout=300"
+    ]
   },
   {
     "name": "Sofascore去广告",
@@ -297,29 +325,45 @@
     "name": "Soul去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx",
     "output": "surge-modules/Soul_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 38: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:api-\\w+|chat-live|post)\\.soulapp\\.cn\\/(?:chat\\/limitInfo|chatroom\\/chatClassifyRoomList|homepage\\/diamond\\/position\\/info|v2\\/post\\/recSquare\\/subTabs|v6\\/planet\\/config)/i then script(\"https://kelee.one/Resource/JavaScript/Soul/Soul_remove_ads.js\") with tag=\"移除Soul广告\", requires_body=true"
+    ]
   },
   {
     "name": "Spotify去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx",
     "output": "surge-modules/Spotify_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 26: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:\\w+-spclient|spclient\\.wg)\\.spotify\\.com(?::443)?\\/(?:bootstrap|user-customization-service)/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/Spotify_remove_ads.js\", {${tab}, ${useractivity}}) with tag=\"Protobuf处理\", timeout=5, requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "Spotify歌词增强",
     "source": "https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx",
     "output": "surge-modules/Spotify_lyrics_translation.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: response if ${url} ~= /^https?:\\/\\/api\\.spotify\\.com\\/v1\\/tracks\\?/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/Spotify_response.js\") with tag=\"跟踪响应·JSON\", requires_body=true",
+      "line 16: Unconverted script line: request if ${url} ~= /^https?:\\/\\/spclient\\.wg\\.spotify\\.com\\/color-lyrics\\/v2\\/track\\/(.+)\\?(.*)format=json/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/Spotify_request.js\") with tag=\"歌词请求·JSON\", requires_body=true",
+      "line 17: Unconverted script line: request if ${url} ~= /^https?:\\/\\/spclient\\.wg\\.spotify\\.com\\/color-lyrics\\/v2\\/track\\/\\w+\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/Spotify_request.js\") with tag=\"歌词请求·Proto\", requires_body=true, binary_body_mode=true",
+      "line 19: Unconverted script line: response if ${url} ~= /^https?:\\/\\/spclient\\.wg\\.spotify\\.com\\/color-lyrics\\/v2\\/track\\/(.+)\\?(.*)format=json(.*)subtype=Translate/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/Translate_response.js\") with tag=\"翻译歌词响应·JSON\", requires_body=true",
+      "line 20: Unconverted script line: response if ${url} ~= /^https?:\\/\\/spclient\\.wg\\.spotify\\.com\\/color-lyrics\\/v2\\/track\\/\\w+\\?(.*)subtype=Translate/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/Translate_response.js\") with tag=\"翻译歌词响应·Proto\", requires_body=true, binary_body_mode=true",
+      "line 22: Unconverted script line: response if ${url} ~= /^https?:\\/\\/spclient\\.wg\\.spotify\\.com\\/color-lyrics\\/v2\\/track\\/(.+)\\?(.*)format=json(.*)subtype=External/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/External_Lyrics_response.js\") with tag=\"外部歌词响应·JSON\", requires_body=true",
+      "line 23: Unconverted script line: response if ${url} ~= /^https?:\\/\\/spclient\\.wg\\.spotify\\.com\\/color-lyrics\\/v2\\/track\\/\\w+\\?(.*)subtype=External/i then script(\"https://kelee.one/Resource/JavaScript/Spotify/External_Lyrics_response.js\") with tag=\"外部歌词响应·Proto\", requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "Sub-Store",
     "source": "https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx",
     "output": "surge-modules/Sub-Store.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 20: Unconverted script line: request if ${url} ~= /^https?:\\/\\/sub\\.store\\/((download)|api\\/(preview|sync|(utils\\/node-info)))/i then script(\"https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js\") with tag=\"Sub-Store Core\", timeout=120, requires_body=true",
+      "line 21: Unconverted script line: request if ${url} ~= /^https?:\\/\\/sub\\.store/i then script(\"https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js\") with tag=\"Sub-Store Simple\", timeout=120, requires_body=true",
+      "line 22: Script line does not contain script-path: cron ${cron} then script(\"https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js\") with tag=\"Sub-Store Sync\", timeout=120"
+    ]
   },
   {
     "name": "Telegram重定向",
@@ -360,15 +404,26 @@
     "name": "Uki去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Uki_remove_ads.lpx",
     "output": "surge-modules/Uki_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 22: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除匹配卡横幅\", requires_body=true",
+      "line 24: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除密友横幅\", requires_body=true",
+      "line 26: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除娱乐页面横幅和悬浮窗配置\", requires_body=true",
+      "line 28: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除广场搜索填充词\", requires_body=true"
+    ]
   },
   {
     "name": "VVebo时间线修复",
     "source": "https://kelee.one/Tool/Loon/Lpx/VVebo_repair.lpx",
     "output": "surge-modules/VVebo_repair.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: request if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/users\\/show\\?/i then script(\"https://kelee.one/Resource/JavaScript/VVebo/VVebo_repair.js\") with tag=\"修复时间线\"",
+      "line 16: Unconverted script line: request if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/user_timeline\\?/i then script(\"https://kelee.one/Resource/JavaScript/VVebo/VVebo_repair.js\") with tag=\"修复时间线\"",
+      "line 18: Unconverted script line: request if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/remind\\/unread_count\\?/i then script(\"https://kelee.one/Resource/JavaScript/VVebo/VVebo_repair.js\") with tag=\"修复时间线\"",
+      "line 20: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/profile\\/statuses\\/tab\\?/i then script(\"https://kelee.one/Resource/JavaScript/VVebo/VVebo_repair.js\") with tag=\"修复时间线\", requires_body=true",
+      "line 22: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/cardlist\\?/i then script(\"https://kelee.one/Resource/JavaScript/VVebo/VVebo_repair.js\") with tag=\"修复我的页面\", requires_body=true"
+    ]
   },
   {
     "name": "WakeUp课程表去广告",
@@ -381,29 +436,51 @@
     "name": "WARP节点查询",
     "source": "https://kelee.one/Tool/Loon/Lpx/WARP_Node_Query.lpx",
     "output": "surge-modules/WARP_Node_Query.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Script line does not contain script-path: generic then script(\"https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/1.1.1.1.panel.js\") with tag=\"WARP · INFO\", img_url=\"icloud.circle.system\", timeout=10"
+    ]
   },
   {
     "name": "WPS每日签到",
     "source": "https://kelee.one/Tool/Loon/Lpx/WPS_checkin.lpx",
     "output": "surge-modules/WPS_checkin.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 22: Unconverted script line: request if ${url} ~= /^https:\\/\\/moapi\\.wps\\.cn\\/app\\/ios\\/v1\\/app$/i then script(\"https://kelee.one/Resource/JavaScript/WPS/WPS_checkin.js\") with enable=${CaptureCookie}, tag=\"捕获Cookie\", requires_body=true",
+      "line 24: Script line does not contain script-path: cron ${CRONEXP} then script(\"https://kelee.one/Resource/JavaScript/WPS/WPS_checkin.js\", {${AK}, ${SK}, ${MAX_RETRIES}}) with tag=\"WPS每日签到\", timeout=120"
+    ]
   },
   {
     "name": "YouTube去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx",
     "output": "surge-modules/YouTube_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/youtubei\\.googleapis\\.com\\/(youtubei\\/v1\\/(browse|next|player|search|reel\\/reel_watch_sequence|guide|account\\/get_setting|get_watch|log_event|config))(\\?(.*))?$/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js\", {${blockUpload}, ${blockShorts}, ${blockImmersive}, ${captionLang}, ${debug}}) with tag=\"YouTube去广告\", requires_body=true, binary_body_mode=true",
+      "line 23: Unconverted script line: request if ${url} ~= /^https?:\\/\\/[\\w-]+\\.googlevideo\\.com\\/initplayback.+&ack.*/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_request.js\", {${captionLang}}) with tag=\"请求初始化\", requires_body=true, binary_body_mode=true",
+      "line 25: Unconverted script line: request if ${url} ~= /^https:\\/\\/youtubei\\.googleapis\\.com\\/youtubei\\/v1\\/log_event/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_request.js\", {${blockUpload}, ${blockShorts}, ${blockImmersive}, ${captionLang}, ${debug}}) with tag=\"请求日志事件\", requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "YouTube双语翻译",
     "source": "https://kelee.one/Tool/Loon/Lpx/YouTubeSubtitlesTranslation.lpx",
     "output": "surge-modules/YouTubeSubtitlesTranslation.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 20: Unconverted script line: request if ${url} ~= /^https?:\\/\\/(www|m|tv)\\.youtube\\.com\\/youtubei\\/v1\\/player\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"JSON·YouTube播放器请求\", requires_body=true",
+      "line 21: Unconverted script line: response if ${url} ~= /^https?:\\/\\/(www|m|tv)\\.youtube\\.com\\/youtubei\\/v1\\/player\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_response.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"JSON·YouTube播放器响应\", requires_body=true",
+      "line 22: Unconverted script line: request if ${url} ~= /^https?:\\/\\/youtubei\\.googleapis\\.com\\/youtubei\\/v1\\/player\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"Proto·YouTube播放器请求\", requires_body=true, binary_body_mode=true",
+      "line 23: Unconverted script line: response if ${url} ~= /^https?:\\/\\/youtubei\\.googleapis\\.com\\/youtubei\\/v1\\/player\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_response.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"Proto·YouTube播放器响应.proto\", requires_body=true, binary_body_mode=true",
+      "line 24: Unconverted script line: response if ${url} ~= /^https?:\\/\\/youtubei\\.googleapis\\.com\\/youtubei\\/v1\\/get_watch\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_response.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"Proto·GetWatch响应\", requires_body=true, binary_body_mode=true",
+      "line 25: Unconverted script line: request if ${url} ~= /^https?:\\/\\/(www|m)\\.youtube\\.com\\/api\\/timedtext\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"YouTube定时文本请求\"",
+      "line 26: Unconverted script line: response if ${url} ~= /^https?:\\/\\/(www|m)\\.youtube\\.com\\/api\\/timedtext\\?(.*)subtype=(Official|External)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Composite_Subtitles_response.js\") with tag=\"YouTube合成定时文本响应\", requires_body=true",
+      "line 27: Unconverted script line: response if ${url} ~= /^https?:\\/\\/(www|m)\\.youtube\\.com\\/api\\/timedtext\\?(.*)subtype=Translate/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_Translate_response.js\") with tag=\"YouTube翻译定时文本响应\", requires_body=true",
+      "line 29: Unconverted script line: request if ${url} ~= /^https?:\\/\\/music\\.youtube\\.com\\/youtubei\\/v1\\/browse\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"JSON·YouTube Music浏览请求\", requires_body=true",
+      "line 30: Unconverted script line: request if ${url} ~= /^https?:\\/\\/youtubei\\.googleapis\\.com\\/youtubei\\/v1\\/browse\\?(.*)/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_request.js\", {${Type}, ${AutoCC}, ${ShowOnly}, ${Position}}) with tag=\"Proto·YouTube Music浏览请求\", requires_body=true, binary_body_mode=true",
+      "line 31: Unconverted script line: response if ${url} ~= /^https?:\\/\\/music\\.youtube\\.com\\/youtubei\\/v1\\/browse\\?(.*)subtype=Translate/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_Translate_response.js\") with tag=\"JSON·YouTube Music翻译歌词响应\", requires_body=true",
+      "line 32: Unconverted script line: response if ${url} ~= /^https?:\\/\\/youtubei\\.googleapis\\.com\\/youtubei\\/v1\\/browse\\?(.*)subtype=Translate/i then script(\"https://kelee.one/Resource/JavaScript/YouTube/YouTube_Subtitles_Translate/YouTube_Subtitles_Translate_response.js\") with tag=\"Proto·YouTube Music翻译歌词响应\", requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "YY去广告",
@@ -444,8 +521,11 @@
     "name": "阿里云盘去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/AliYunDrive_remove_ads.lpx",
     "output": "surge-modules/AliYunDrive_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 22: Unconverted script line: response if ${url} ~= /^https:\\/\\/(biz)?api\\.alipan\\.com\\/apps\\/v\\d\\/users?\\/home\\/(news|widgets)/i then script(\"https://kelee.one/Resource/JavaScript/AliYunDrive/AliYunDrive_remove_ads.js\") with tag=\"移除阿里云盘广告\", requires_body=true",
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/member\\.alipan\\.com\\/v1\\/users\\/onboard_list/i then script(\"https://kelee.one/Resource/JavaScript/AliYunDrive/AliYunDrive_remove_ads.js\") with tag=\"移除阿里云盘广告\", requires_body=true"
+    ]
   },
   {
     "name": "百度地图去广告",
@@ -465,15 +545,19 @@
     "name": "百度输入法去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Baidu_input_method_remove_ads.lpx",
     "output": "surge-modules/Baidu_input_method_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 24: Unconverted script line: response if ${url} ~= /^https?:\\/\\/mime\\.baidu\\.com\\/(imrobot\\/v1\\/pub\\/relation\\/get_robot_list|v5\\/custom_page\\/(layout|getdata))/i then script(\"https://kelee.one/Resource/JavaScript/Baidu_input_method/Baidu_input_method_remove_ads.js\") with tag=\"百度输入法去广告\", requires_body=true"
+    ]
   },
   {
     "name": "百度贴吧去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx",
     "output": "surge-modules/Tieba_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 49: Unconverted script line: response if ${url} ~= /^https?:\\/\\/tieba(?:c)?\\.baidu\\.com\\/c\\/(f\\/excellent\\/personalized|f\\/frs\\/page|b\\/ad\\/adBid|f\\/ad\\/getFeedAd|f\\/pb\\/page|f\\/frs\\/generalTabList)\\?cmd=\\d+&format=protobuf/i then script(\"https://kelee.one/Resource/JavaScript/Tieba/tieba-proto.js\", {${per_filter_video_thread}}) with tag=\"ProtoBuf处理\", timeout=10, requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "百度网盘去广告",
@@ -486,8 +570,10 @@
     "name": "百度网页去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx",
     "output": "surge-modules/BaiduSearchWebpage_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: response if ${url} ~= /^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})/i then script(\"https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js\") with tag=\"移除百度搜索首页信息流广告\", requires_body=true"
+    ]
   },
   {
     "name": "百度文库去广告",
@@ -500,8 +586,12 @@
     "name": "宝宝树孕育去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/BabyTree_remove_ads.lpx",
     "output": "surge-modules/BabyTree_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 21: Unconverted script line: response if ${url} ~= /^http:\\/\\/api\\.babytree\\.com\\/bafconfigcenter_intf\\/config\\/get\\?/i then script(\"https://kelee.one/Resource/JavaScript/BabyTree/BabyTree_remove_ads.js\") with tag=\"调整整体配置\", requires_body=true",
+      "line 22: Unconverted script line: response if ${url} ~= /^http:\\/\\/go\\.babytree\\.com\\/go_pregnancy\\/api\\/(app_index\\/get_app_tab|cms_column\\/get_column_list|feeds\\/get_index_feeds_list|user\\/get_user_info)\\?/i then script(\"https://kelee.one/Resource/JavaScript/BabyTree/BabyTree_remove_ads.js\") with tag=\"移除各页面推广\", requires_body=true",
+      "line 23: Unconverted script line: response if ${url} ~= /^http:\\/\\/go\\.babytree\\.com\\/go_search\\/api\\/mobile_search_new\\/search_index/i then script(\"https://kelee.one/Resource/JavaScript/BabyTree/BabyTree_remove_ads.js\") with tag=\"移除搜索列表推广\", requires_body=true"
+    ]
   },
   {
     "name": "贝壳找房去广告",
@@ -514,15 +604,23 @@
     "name": "哔哩哔哩漫画去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/BiliComic_remove_ads.lpx",
     "output": "surge-modules/BiliComic_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 27: Unconverted script line: response if ${url} ~= /^https:\\/\\/manga\\.bilibili\\.com\\/twirp\\/comic\\.v\\d\\.Comic\\/GetClassPageAllTabs/i then script(\"https://kelee.one/Resource/JavaScript/BiliComic/BiliComic_remove_ads.js\") with tag=\"移除顶部标签\", requires_body=true",
+      "line 28: Unconverted script line: response if ${url} ~= /^https:\\/\\/manga\\.bilibili\\.com\\/twirp\\/user\\.v\\d\\.User\\/UCenterConf/i then script(\"https://kelee.one/Resource/JavaScript/BiliComic/BiliComic_remove_ads.js\") with tag=\"精简我的页面\", requires_body=true"
+    ]
   },
   {
     "name": "哔哩哔哩去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx",
     "output": "surge-modules/Bilibili_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 68: Unconverted script line: request if ${url} ~= /^https:\\/\\/(?:grpc\\.biliapi\\.net|app\\.bilibili\\.com)\\/bilibili\\.community\\.service\\.dm\\.v1\\.DM\\/DmSegMobile$/i then script(\"https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js\", {${logLevel}}) with enable=${sponsorBlock}, tag=\"空降助手\", timeout=10, requires_body=true, binary_body_mode=true",
+      "line 70: Unconverted script line: request if ${url} ~= /^https:\\/\\/(?:grpc\\.biliapi\\.net|app\\.bilibili\\.com)\\/bilibili\\.(?:app\\.viewunite\\.v1\\.View\\/View|main\\.community\\.reply\\.v1\\.Reply\\/MainList)$/i then script(\"https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js\", {${purifyComment}, ${logLevel}}) with enable=${optimizeRequest}, tag=\"请求处理\", timeout=10, requires_body=true, binary_body_mode=true",
+      "line 72: Unconverted script line: response if ${url} ~= /^https:\\/\\/(grpc\\.biliapi\\.net|app\\.bilibili\\.com)\\/bilibili\\.(app\\.(show\\.v1\\.Popular\\/Index|dynamic\\.v2\\.Dynamic\\/DynAll|view(unite)?\\.v1\\.View\\/(View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\\.v1\\.PlayURL\\/PlayView|playerunite\\.v1\\.Player\\/PlayViewUnite)|polymer\\.app\\.search\\.v1\\.Search\\/SearchAll|community\\.service\\.dm\\.v1\\.DM\\/DmView|main\\.community\\.reply\\.v1\\.Reply\\/MainList|pgc\\.gateway\\.player\\.v2\\.PlayURL\\/PlayView)$/i then script(\"https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js\", {${displayUpList}, ${purifyComment}, ${sponsorBlock}, ${logLevel}}) with tag=\"ProtoBuf处理\", requires_body=true, binary_body_mode=true",
+      "line 74: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.live\\.bilibili\\.com\\/xlive\\/(?:app-interface\\/v2\\/index\\/feed|app-room\\/v1\\/index\\/getInfoBy(?:Room|User))\\?/i then script(\"https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js\") with tag=\"移除直播间广告\", requires_body=true"
+    ]
   },
   {
     "name": "比特球云盘去广告",
@@ -552,8 +650,10 @@
     "name": "薄荷健康去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/BooHee_remove_ads.lpx",
     "output": "surge-modules/BooHee_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 33: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.boohee\\.com\\/meta-interface\\/v1\\/index\\/plaza-flow\\?/i then script(\"https://kelee.one/Resource/JavaScript/BooHee/BooHee_remove_ads.js\") with tag=\"移除广场推荐页面横幅\", requires_body=true"
+    ]
   },
   {
     "name": "菜鸟去广告",
@@ -566,15 +666,24 @@
     "name": "财新去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/CaixinMedia_remove_ads.lpx",
     "output": "surge-modules/CaixinMedia_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 24: Unconverted script line: response if ${url} ~= /^https:\\/\\/entities\\.caixin\\.com\\/api\\/dataplus\\/columns/i then script(\"https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js\") with tag=\"移除财新数据通广告\", requires_body=true",
+      "line 26: Unconverted script line: response if ${url} ~= /^https:\\/\\/gateway\\.caixin\\.com\\/api\\/app-api\\/(caixinapp\\/appinfo|search\\/getkeyword)/i then script(\"https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js\") with tag=\"移除文末广告\", requires_body=true",
+      "line 28: Unconverted script line: response if ${url} ~= /^https:\\/\\/gateway\\.caixin\\.com\\/api\\/app-content\\/fm\\/index\\/list\\?/i then script(\"https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js\") with tag=\"移除财新FM广告\", requires_body=true",
+      "line 30: Unconverted script line: response if ${url} ~= /^https:\\/\\/gg\\.caixin\\.com\\/s\\?z=caixin&op=\\d/i then script(\"https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js\") with tag=\"移除开屏广告\", requires_body=true",
+      "line 32: Unconverted script line: response if ${url} ~= /^https:\\/\\/mappsv5\\.caixin\\.com\\/articlev5\\/\\d+\\/\\d+\\.json$/i then script(\"https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js\") with tag=\"移除正文广告\", requires_body=true",
+      "line 33: Unconverted script line: response if ${url} ~= /^https:\\/\\/mapps?v5\\.caixin\\.com\\/(channelv5\\/list|\\/?index_page_v5\\/)\\w+/i then script(\"https://kelee.one/Resource/JavaScript/CaixinMedia/CaixinMedia_remove_ads.js\") with tag=\"移除正文广告\", requires_body=true"
+    ]
   },
   {
     "name": "彩云天气去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/ColorfulClouds_remove_ads.lpx",
     "output": "surge-modules/ColorfulClouds_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/(wrapper\\.cyapi\\.cn|api\\.caiyunapp\\.com|cdn-w\\.caiyunapp\\.com)\\/v1\\/activity\\?/i then script(\"https://kelee.one/Resource/JavaScript/ColorfulClouds/ColorfulClouds_remove_ads.js\") with tag=\"彩云天气去广告\", requires_body=true"
+    ]
   },
   {
     "name": "测测去广告",
@@ -594,8 +703,10 @@
     "name": "车来了去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Chelaile_remove_ads.lpx",
     "output": "surge-modules/Chelaile_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 34: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.chelaile\\.net\\.cn\\/bus-side\\/appToggle\\/getStatus\\?/i then script(\"https://kelee.one/Resource/JavaScript/Chelaile/Chelaile_remove_ads.js\") with tag=\"清洗配置\", requires_body=true"
+    ]
   },
   {
     "name": "成分喵去广告",
@@ -629,8 +740,10 @@
     "name": "代理链路检测",
     "source": "https://kelee.one/Tool/Loon/Lpx/NodeLinkCheck.lpx",
     "output": "surge-modules/NodeLinkCheck.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Script line does not contain script-path: generic then script(\"https://kelee.one/Resource/JavaScript/NodeLinkCheck/NodeLinkCheck.js\") with tag=\"代理链路检测\", img_url=\"link.circle.system\""
+    ]
   },
   {
     "name": "大麦去广告",
@@ -699,8 +812,10 @@
     "name": "斗鱼去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Douyu_remove_ads.lpx",
     "output": "surge-modules/Douyu_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 30: Unconverted script line: response if ${url} ~= /^https:\\/\\/apiv2\\.douyucdn\\.cn\\/mgapi\\/livenc\\/home\\/getRecV3/i then script(\"https://kelee.one/Resource/JavaScript/Douyu/Douyu_remove_ads.js\") with tag=\"移除首页轮播图和视频流广告\", requires_body=true"
+    ]
   },
   {
     "name": "堆糖去广告",
@@ -727,15 +842,28 @@
     "name": "帆书去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/KebidaDushu_remove_ads.lpx",
     "output": "surge-modules/KebidaDushu_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 25: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/chief-orch\\/home\\/bookPortal\\/v105\\/category/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 26: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/abtest-front\\/banner-modular\\/get/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 27: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/resource-orchestration-system\\/book\\/channel\\/v100\\/info/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 28: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/fs-member\\/user\\/profile\\/v100\\/detail/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 29: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/chief-orch\\/home\\/bookPortal\\/v111\\/forApp/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 30: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/sns-orchestration-system\\/homePage\\/api\\/v100\\/myPage/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 31: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/task-orchestration\\/taskCenter\\/api\\/v101\\/taskList/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 32: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/resource-orchestration-system\\/book\\/v101\\/content/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true",
+      "line 33: Unconverted script line: response if ${url} ~= /^https?:\\/\\/g[a-z0-9-]+\\.dushu365\\.com\\/user-orchestration\\/user\\/api\\/v101\\/ceiltip/i then script(\"https://kelee.one/Resource/JavaScript/KebidaDushu/KebidaDushu_remove_ads.js\") with tag=\"帆书去广告\", requires_body=true"
+    ]
   },
   {
     "name": "飞客去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/FlyerTea_remove_ads.lpx",
     "output": "surge-modules/FlyerTea_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 20: Unconverted script line: response if ${url} ~= /^https:\\/\\/www\\.flyert\\.com\\.cn\\/api\\/mobile\\/index\\.php\\?version=5/i then script(\"https://kelee.one/Resource/JavaScript/FlyerTea/FlyerTea_remove_ads.js\") with tag=\"移除板块广告\", requires_body=true",
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/www\\.flyert\\.com\\.cn\\/api\\/mobile\\/index\\.php\\?module=plugin&id=k_misign:sign/i then script(\"https://kelee.one/Resource/JavaScript/FlyerTea/FlyerTea_remove_ads.js\") with tag=\"移除签到弹窗广告\", requires_body=true"
+    ]
   },
   {
     "name": "飞猪旅行去广告",
@@ -769,8 +897,10 @@
     "name": "风鸟去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/RiskBird_remove_ads.lpx",
     "output": "surge-modules/RiskBird_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 19: Unconverted script line: response if ${url} ~= /^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend/i then script(\"https://kelee.one/Resource/JavaScript/RiskBird/RiskBird_remove_ads.js\") with tag=\"移除推荐老板\", requires_body=true"
+    ]
   },
   {
     "name": "纷玩岛去广告",
@@ -790,8 +920,23 @@
     "name": "高德地图去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx",
     "output": "surge-modules/Amap_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 40: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/aos\\/perception\\/publicTravel\\/beforeNavi\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除路线规划推广\", requires_body=true",
+      "line 41: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/bus\\/plan\\/integrate\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除路线规划、导航结束页推广\", requires_body=true",
+      "line 42: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/c3frontend\\/(?:af-(?:hotel|launch)\\/page\\/main|af-nearby\\/nearby)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除导航详情页底部酒店、处理附近页\", requires_body=true",
+      "line 43: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/perception\\/drive\\/(?:routeInfo|routePlan)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除路线规划推广\", requires_body=true",
+      "line 44: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_bff\\/hotword\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除搜索栏推广\", requires_body=true",
+      "line 45: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/(?:mps|search\\/sp|sug|tips_operation_location)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除搜索详情页推广\", requires_body=true",
+      "line 46: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/(?:card-service-plan-home|main-page)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除首页推广\", requires_body=true",
+      "line 47: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/frogserver\\/aocs\\/updatable\\/1\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除首页推广\", requires_body=true",
+      "line 48: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/dsp\\/profile\\/index\\/nodefaasv3\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除我的页面推广\", requires_body=true",
+      "line 49: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search\\/nearbyrec_smart\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除附近页推广\", requires_body=true",
+      "line 50: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/valueadded\\/alimama\\/splash_screen\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除开屏广告\", requires_body=true",
+      "line 51: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:car\\/order\\/content_info|order_web\\/friendly_information)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除打车页推广卡片、弹窗\", requires_body=true",
+      "line 52: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/promotion-web\\/resource(\\/home)?\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除打车页红点角标、天气图标\", requires_body=true",
+      "line 53: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:info|m5)\\.amap\\.com\\/ws\\/shield\\/search\\/(?:common\\/coupon\\/info|poi\\/detail)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除导航详情页推广\", requires_body=true"
+    ]
   },
   {
     "name": "稿定设计去广告",
@@ -811,15 +956,19 @@
     "name": "哈罗去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx",
     "output": "surge-modules/EasyBike_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: response if ${url} ~= /^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$/i then script(\"https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js\") with tag=\"去广告\", requires_body=true"
+    ]
   },
   {
     "name": "航旅纵横去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx",
     "output": "surge-modules/Umetrip_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 17: Unconverted script line: response if ${url} ~= /^http?:\\/\\/(114\\.115\\.217\\.129)|(home\\.umetrip\\.com)\\/gateway\\/api\\/umetrip\\/native$/i then script(\"https://kelee.one/Resource/JavaScript/Umetrip/Umetrip_remove_ads.js\") with tag=\"移除首页广告\""
+    ]
   },
   {
     "name": "好轻去广告",
@@ -860,8 +1009,13 @@
     "name": "虎扑去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/HUPU_remove_ads.lpx",
     "output": "surge-modules/HUPU_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 24: Unconverted script line: response if ${url} ~= /^https:\\/\\/fairy\\.mobileapi\\.hupu\\.com\\/mang\\/preview\\/banners/i then script(\"https://kelee.one/Resource/JavaScript/HUPU/HUPU_remove_ads.js\") with tag=\"移除虎扑广告\", requires_body=true",
+      "line 25: Unconverted script line: response if ${url} ~= /^https:\\/\\/bbs\\.mobileapi\\.hupu\\.com\\/\\d\\/\\d\\.\\d\\.\\d+\\/bbsallapi\\/lego\\/data/i then script(\"https://kelee.one/Resource/JavaScript/HUPU/HUPU_remove_ads.js\") with tag=\"移除虎扑广告\", requires_body=true",
+      "line 26: Unconverted script line: response if ${url} ~= /^https:\\/\\/games\\.mobileapi\\.hupu\\.com\\/\\d\\/\\d\\.\\d\\.\\d+\\/buffer\\/hotList/i then script(\"https://kelee.one/Resource/JavaScript/HUPU/HUPU_remove_ads.js\") with tag=\"移除虎扑广告\", requires_body=true",
+      "line 27: Unconverted script line: response if ${url} ~= /^https:\\/\\/games\\.mobileapi\\.hupu\\.com\\/\\d\\/\\d\\.\\d\\.\\d+\\/bplapi\\/user\\/v1\\/more/i then script(\"https://kelee.one/Resource/JavaScript/HUPU/HUPU_remove_ads.js\") with tag=\"移除虎扑广告\", requires_body=true"
+    ]
   },
   {
     "name": "虎嗅去广告",
@@ -902,22 +1056,31 @@
     "name": "节点检测工具",
     "source": "https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx",
     "output": "surge-modules/Node_detection_tool.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Script line does not contain script-path: generic then script(\"https://kelee.one/Resource/JavaScript/Node_detection_tool/NetworkEntryAndExitQueries.js\") with tag=\"入口落地查询\", img_url=\"globe.asia.australia.system\", timeout=10",
+      "line 15: Script line does not contain script-path: generic then script(\"https://kelee.one/Resource/JavaScript/Node_detection_tool/LocationDetection.js\") with tag=\"地理位置查询\", img_url=\"location.circle.system\", timeout=10",
+      "line 16: Script line does not contain script-path: generic then script(\"https://kelee.one/Resource/JavaScript/Node_detection_tool/NodeUnlockDetection.js\") with tag=\"节点解锁查询\", img_url=\"play.circle.system\", timeout=20"
+    ]
   },
   {
     "name": "京东比价",
     "source": "https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx",
     "output": "surge-modules/JD_Price.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: request if ${url} ~= /^https?:\\/\\/apapia-sqk-weblogic\\.manmanbuy\\.com\\/baoliao\\/center\\/menu$/i then script(\"https://kelee.one/Resource/JavaScript/JD/JD_Price.js\") with tag=\"捕获令牌\", timeout=10, requires_body=true",
+      "line 16: Unconverted script line: response if ${url} ~= /^https?:\\/\\/in\\.m\\.jd\\.com\\/product\\/graphext\\/\\d+\\.html/i then script(\"https://kelee.one/Resource/JavaScript/JD/JD_Price.js\") with tag=\"京东比价\", timeout=10, requires_body=true"
+    ]
   },
   {
     "name": "京东去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx",
     "output": "surge-modules/JD_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 22: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)/i then script(\"https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js\") with tag=\"移除京东广告\", requires_body=true"
+    ]
   },
   {
     "name": "京东外卖去广告",
@@ -988,8 +1151,13 @@
     "name": "快看漫画去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/KuaiKanComic_remove_ads.lpx",
     "output": "surge-modules/KuaiKanComic_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 51: Unconverted script line: response if ${url} ~= /^https:\\/\\/(cdn-)?api\\.kkmh\\.com\\/v\\d\\/ironman\\/comic\\/recommend/i then script(\"https://kelee.one/Resource/JavaScript/KuaiKanComic/KuaiKanComic_remove_ads.js\") with tag=\"修改广告参数\", requires_body=true",
+      "line 53: Unconverted script line: response if ${url} ~= /^https:\\/\\/(cdn-)?api\\.kkmh\\.com\\/v\\d\\/ironman\\/discovery_v\\d\\/tab_list_v\\d/i then script(\"https://kelee.one/Resource/JavaScript/KuaiKanComic/KuaiKanComic_remove_ads.js\") with tag=\"精简首页热门标签\", requires_body=true",
+      "line 55: Unconverted script line: response if ${url} ~= /^https:\\/\\/(cdn-)?social\\.kkmh\\.com\\/v\\d\\/graph\\/homepage\\/comicVideo\\/v\\d\\/configs/i then script(\"https://kelee.one/Resource/JavaScript/KuaiKanComic/KuaiKanComic_remove_ads.js\") with tag=\"精简社区标签\", requires_body=true",
+      "line 57: Unconverted script line: response if ${url} ~= /^https:\\/\\/(cdn-)?social\\.kkmh\\.com\\/v\\d\\/graph\\/unified_feed$/i then script(\"https://kelee.one/Resource/JavaScript/KuaiKanComic/KuaiKanComic_remove_ads.js\") with tag=\"精简社区信息流\", requires_body=true"
+    ]
   },
   {
     "name": "快手去广告",
@@ -1065,8 +1233,10 @@
     "name": "乐播投屏去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/TV_Assistant_remove_ads.lpx",
     "output": "surge-modules/TV_Assistant_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-desk\\/endpoint\\/app-resource\\/app_tab_red_dot\\?user-tag=1$/i then script(\"https://kelee.one/Resource/JavaScript/TV_Assistant/TV_Assistant_remove_ads.js\") with tag=\"移除底栏视频标签\", requires_body=true"
+    ]
   },
   {
     "name": "两步路户外助手去广告",
@@ -1114,8 +1284,10 @@
     "name": "漫客栈去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/MKZ_remove_ads.lpx",
     "output": "surge-modules/MKZ_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\//i then script(\"https://kelee.one/Resource/JavaScript/MKZ/MKZ_remove_ads.js\") with tag=\"配置修改\", requires_body=true"
+    ]
   },
   {
     "name": "猫耳FM去广告",
@@ -1156,8 +1328,10 @@
     "name": "美颜相机去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/MeituMYXJ_remove_ads.lpx",
     "output": "surge-modules/MeituMYXJ_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 24: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.meiyan\\.com\\/operation\\/home\\.json\\?/i then script(\"https://kelee.one/Resource/JavaScript/MeituMYXJ/MeituMYXJ_remove_ads.js\") with tag=\"精简首页功能栏目并移除美颜推荐\", requires_body=true"
+    ]
   },
   {
     "name": "美柚去广告",
@@ -1191,8 +1365,10 @@
     "name": "脉脉去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/MaiMai_remove_ads.lpx",
     "output": "surge-modules/MaiMai_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/(h3\\.)?open\\.taou\\.com\\/maimai\\/(feed|gossip)\\/v\\d\\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\\?/i then script(\"https://kelee.one/Resource/JavaScript/MaiMai/MaiMai_remove_ads.js\") with tag=\"移除信息流和评论区大块广告\", requires_body=true"
+    ]
   },
   {
     "name": "摩天轮去广告",
@@ -1205,8 +1381,10 @@
     "name": "摩托范去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx",
     "output": "surge-modules/MotorFans_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 30: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$/i then script(\"https://kelee.one/Resource/JavaScript/MotorFans/MotorFans_remove_ads.js\") with tag=\"修改配置\", requires_body=true"
+    ]
   },
   {
     "name": "南网在线去广告",
@@ -1233,15 +1411,19 @@
     "name": "配音秀去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/DubbingShow_remove_ads.lpx",
     "output": "surge-modules/DubbingShow_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue/i then script(\"https://kelee.one/Resource/JavaScript/DubbingShow/DubbingShow_remove_ads.js\") with tag=\"移除首页底部弹窗\", requires_body=true"
+    ]
   },
   {
     "name": "拼多多去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx",
     "output": "surge-modules/PinDuoDuo_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 72: Unconverted script line: response if ${url} ~= /^https:\\/\\/m\\.pinduoduo\\.net\\/mdkd\\/package\\?from_app_scan/i then script(\"https://kelee.one/Resource/JavaScript/PinDuoDuo/PinDuoDuo_remove_ads.js\") with tag=\"移除扫码取件页面商品推荐及弹窗\", requires_body=true"
+    ]
   },
   {
     "name": "皮皮虾去广告",
@@ -1254,8 +1436,15 @@
     "name": "朴朴超市去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/PuPuMall_remove_ads.lpx",
     "output": "surge-modules/PuPuMall_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 18: Unconverted script line: response if ${url} ~= /^https:\\/\\/j1\\.pupuapi\\.com\\/client\\/marketing\\/banner\\/v7/i then script(\"https://kelee.one/Resource/JavaScript/PuPuMall/PuPuMall_remove_ads.js\") with tag=\"移除朴朴超市广告\", requires_body=true",
+      "line 19: Unconverted script line: response if ${url} ~= /^https:\\/\\/j1\\.pupuapi\\.com\\/client\\/marketing\\/banner\\/search_component_banner/i then script(\"https://kelee.one/Resource/JavaScript/PuPuMall/PuPuMall_remove_ads.js\") with tag=\"移除朴朴超市广告\", requires_body=true",
+      "line 20: Unconverted script line: response if ${url} ~= /^https:\\/\\/j1\\.pupuapi\\.com\\/client\\/search\\/hot_keywords\\/v3/i then script(\"https://kelee.one/Resource/JavaScript/PuPuMall/PuPuMall_remove_ads.js\") with tag=\"移除朴朴超市广告\", requires_body=true",
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/j1\\.pupuapi\\.com\\/client\\/app_resource\\/resource_preload\\/list_h5_resource/i then script(\"https://kelee.one/Resource/JavaScript/PuPuMall/PuPuMall_remove_ads.js\") with tag=\"移除朴朴超市广告\", requires_body=true",
+      "line 22: Unconverted script line: response if ${url} ~= /^https:\\/\\/j1\\.pupuapi\\.com\\/client\\/recommendation\\/interests\\/products/i then script(\"https://kelee.one/Resource/JavaScript/PuPuMall/PuPuMall_remove_ads.js\") with tag=\"移除朴朴超市广告\", requires_body=true",
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/j1\\.pupuapi\\.com\\/client\\/marketing\\/advertisement\\/v1/i then script(\"https://kelee.one/Resource/JavaScript/PuPuMall/PuPuMall_remove_ads.js\") with tag=\"移除朴朴超市广告\", requires_body=true"
+    ]
   },
   {
     "name": "前程无忧去广告",
@@ -1268,8 +1457,15 @@
     "name": "汽车之家去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/AutoHome_remove_ads.lpx",
     "output": "surge-modules/AutoHome_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 53: Unconverted script line: response if ${url} ~= /^https:\\/\\/news\\.app\\.autohome\\.com\\.cn\\/news_v\\d+(?:\\.\\d+){2}\\/news\\/homenavigation/i then script(\"https://kelee.one/Resource/JavaScript/AutoHome/AutoHome_remove_ads.js\") with tag=\"精简我的页面\", requires_body=true",
+      "line 55: Unconverted script line: response if ${url} ~= /^https:\\/\\/(a\\.athm\\.cn\\/)?mobile\\.app\\.autohome\\.com\\.cn\\/platform\\/carserver\\/((usercenter\\/getservicecards)|(carcard\\/allcard)|(carcard\\/mycardv\\d+)|(carcard\\/cards))/i then script(\"https://kelee.one/Resource/JavaScript/AutoHome/AutoHome_remove_ads.js\") with tag=\"精简我的页面\", requires_body=true",
+      "line 57: Unconverted script line: response if ${url} ~= /^https:\\/\\/(a\\.athm\\.cn\\/)?club\\.app\\.autohome\\.com\\.cn\\/club_v\\d+(?:\\.\\d+){2}\\/club\\/index\\/businessv\\d+/i then script(\"https://kelee.one/Resource/JavaScript/AutoHome/AutoHome_remove_ads.js\") with tag=\"社区广场去广告\", requires_body=true",
+      "line 59: Unconverted script line: response if ${url} ~= /^https:\\/\\/(a\\.athm\\.cn\\/)?cars\\.app\\.autohome\\.com\\.cn\\/carstreaming\\/selectcarportal\\/reclist/i then script(\"https://kelee.one/Resource/JavaScript/AutoHome/AutoHome_remove_ads.js\") with tag=\"移除直播浮窗\", requires_body=true",
+      "line 61: Unconverted script line: response if ${url} ~= /^https:\\/\\/(a\\.athm\\.cn\\/)?cars\\.app\\.autohome\\.com\\.cn\\/carstreaming\\/selectcarportal\\/seriestopwithtagscard/i then script(\"https://kelee.one/Resource/JavaScript/AutoHome/AutoHome_remove_ads.js\") with tag=\"移除报价页面直播内容\", requires_body=true",
+      "line 63: Unconverted script line: response if ${url} ~= /^https:\\/\\/(a\\.athm\\.cn\\/)?apiautoappusc\\.che168\\.com\\/apic\\/v\\d+\\/gethomepagefeed/i then script(\"https://kelee.one/Resource/JavaScript/AutoHome/AutoHome_remove_ads.js\") with tag=\"移除二手车竖版轮播图\", requires_body=true"
+    ]
   },
   {
     "name": "起点读书去广告",
@@ -1289,8 +1485,11 @@
     "name": "亲宝宝去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Qbb_remove_ads.lpx",
     "output": "surge-modules/Qbb_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 33: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.qbb6\\.com\\/commons\\/self\\/button\\/group\\/get\\/v\\d\\?/i then script(\"https://kelee.one/Resource/JavaScript/Qbb/my.js\") with tag=\"精简我的页面\", requires_body=true",
+      "line 35: Unconverted script line: response if ${url} ~= /^https:\\/\\/apipt\\.qbb6\\.com\\/parenting\\/pt\\/homepage\\/get\\/v\\d\\?/i then script(\"https://kelee.one/Resource/JavaScript/Qbb/homepage.js\") with tag=\"精简育儿页面\", requires_body=true"
+    ]
   },
   {
     "name": "蜻蜓FM去广告",
@@ -1303,8 +1502,10 @@
     "name": "汽水音乐去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/SodaMusic_remove_ads.lpx",
     "output": "surge-modules/SodaMusic_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 48: Unconverted script line: response if ${url} ~= /^https:\\/\\/(beta-luna\\.douyin|api5-lq\\.qishui)\\.com\\/luna\\/me\\/recently-played-media\\?/i then script(\"https://kelee.one/Resource/JavaScript/SodaMusic/SodaMusic_remove_ads.js\") with tag=\"移除播放页面视频流\", requires_body=true"
+    ]
   },
   {
     "name": "启信宝去广告",
@@ -1366,8 +1567,10 @@
     "name": "书旗小说去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/ShuQiCenterReader_remove_ads.lpx",
     "output": "surge-modules/ShuQiCenterReader_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 24: Unconverted script line: response if ${url} ~= /^https:\\/\\/ocean\\.shuqireader\\.com\\/sqios\\/render\\/render\\/page\\/bookstore$/i then script(\"https://kelee.one/Resource/JavaScript/ShuQiCenterReader/ShuQiCenterReader_remove_ads.js\") with tag=\"移除书城横幅和阅读广告\", requires_body=true"
+    ]
   },
   {
     "name": "数字心动去广告",
@@ -1387,8 +1590,11 @@
     "name": "淘宝去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx",
     "output": "surge-modules/Taobao_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 35: Unconverted script line: response if ${url} ~= /^https:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(cloudvideo\\.video\\.query|wireless\\.home\\.splash\\.awesome\\.get)/i then script(\"https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js\") with tag=\"移除淘宝开屏广告\", requires_body=true",
+      "line 37: Unconverted script line: response if ${url} ~= /^https:\\/\\/poplayer\\.template\\.alibaba\\.com\\/\\w+\\.json/i then script(\"https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js\") with tag=\"移除淘宝开屏广告\", requires_body=true"
+    ]
   },
   {
     "name": "淘票票去广告",
@@ -1408,8 +1614,10 @@
     "name": "腾讯视频去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Tencent_Video_remove_ads.lpx",
     "output": "surge-modules/Tencent_Video_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 35: Unconverted script line: request if ${url} ~= /^https?:\\/\\/vv\\.video\\.qq\\.com\\/getvinfo/i then script(\"https://kelee.one/Resource/JavaScript/CommonScript/replace-body.js\", \"&sppreviewtype=\\\\d(.*)&spsrt=\\\\d->&sppreviewtype=0$1&spsrt=0\") with tag=\"移除广告\", requires_body=true"
+    ]
   },
   {
     "name": "腾讯文档去广告",
@@ -1478,15 +1686,21 @@
     "name": "网易大神去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/NetEaseGodlike_remove_ads.lpx",
     "output": "surge-modules/NetEaseGodlike_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 26: Unconverted script line: response if ${url} ~= /^https:\\/\\/app-conf\\.ds\\.163\\.com\\/v1\\/app\\/base\\/conf\\/static\\/start-config\\?os=ios/i then script(\"https://kelee.one/Resource/JavaScript/NetEaseGodlike/NetEaseGodlike_remove_ads.js\") with tag=\"网易大神去广告\", timeout=10, requires_body=true"
+    ]
   },
   {
     "name": "网易新闻去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/NeteaseNews_remove_ads.lpx",
     "output": "surge-modules/NeteaseNews_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 27: Unconverted script line: response if ${url} ~= /^https:\\/\\/nex\\.163\\.com\\/q/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseNews/NeteaseNews_remove_ads.js\") with tag=\"移除网易新闻广告\", requires_body=true",
+      "line 29: Unconverted script line: response if ${url} ~= /^https:\\/\\/gw\\.m\\.163\\.com\\/nc\\/api\\/v1\\/feed\\/dynamic\\/headline-list\\?/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseNews/NeteaseNews_remove_ads.js\") with tag=\"移除网易新闻广告\", requires_body=true",
+      "line 31: Unconverted script line: response if ${url} ~= /^https:\\/\\/gw\\.m\\.163\\.com\\/nc\\/api\\/v1\\/search\\/hot-word/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseNews/NeteaseNews_remove_ads.js\") with tag=\"移除网易新闻广告\", requires_body=true"
+    ]
   },
   {
     "name": "网易有道词典去广告",
@@ -1506,8 +1720,15 @@
     "name": "网易云音乐去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/NeteaseCloudMusic_remove_ads.lpx",
     "output": "surge-modules/NeteaseCloudMusic_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 49: Unconverted script line: response if ${url} ~= /^https?:\\/\\/interface\\d?\\.music\\.163\\.com\\/eapi\\/(?:batch|v2\\/resource\\/comment\\/floor\\/get)/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js\") with tag=\"评论区、热推、有话想说、分享一下、歌曲下的祝福等小提示\", timeout=20, requires_body=true, binary_body_mode=true",
+      "line 50: Unconverted script line: response if ${url} ~= /^https?:\\/\\/interface\\d?\\.music\\.163\\.com\\/eapi\\/(?:homepage\\/block\\/page|link\\/page\\/rcmd\\/(?:block\\/resource\\/multi\\/refresh|resource\\/show))/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js\", {${PRGG}, ${PRRK}, ${PRDRD}, ${PRSCVPT}, ${PRST}, ${PRRR}, ${HMPR}, ${PRMST}, ${PRCN}}) with tag=\"推荐、home、主页\", timeout=20, requires_body=true, binary_body_mode=true",
+      "line 51: Unconverted script line: response if ${url} ~= /^https?:\\/\\/interface\\d?\\.music\\.163\\.com\\/eapi\\/link\\/home\\/framework\\/tab/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js\", {${MY}, ${DT}, ${FX}}) with tag=\"底部选项卡\", timeout=20, requires_body=true, binary_body_mode=true",
+      "line 52: Unconverted script line: response if ${url} ~= /^https?:\\/\\/interface\\d?\\.music\\.163\\.com\\/eapi\\/link\\/page\\/discovery\\/resource\\/show/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js\") with tag=\"发现页\", timeout=20, requires_body=true, binary_body_mode=true",
+      "line 53: Unconverted script line: response if ${url} ~= /^https?:\\/\\/interface\\d?\\.music\\.163\\.com\\/eapi\\/link\\/position\\/show\\/resource/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js\") with tag=\"我的页面\", timeout=20, requires_body=true, binary_body_mode=true",
+      "line 54: Unconverted script line: response if ${url} ~= /^https?:\\/\\/interface\\d?\\.music\\.163\\.com\\/eapi\\/user\\/follow\\/users\\/mixed\\/get/i then script(\"https://kelee.one/Resource/JavaScript/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js\") with tag=\"显示未关注你的人\", timeout=20, requires_body=true, binary_body_mode=true"
+    ]
   },
   {
     "name": "完美世界电竞去广告",
@@ -1527,8 +1748,29 @@
     "name": "微博去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx",
     "output": "surge-modules/Weibo_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 45: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:checkin\\/show|client\\/publisher_list|push\\/active)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除首页推广\", requires_body=true",
+      "line 47: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/groups\\/allgroups\\/v2\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除首页顶部标签\", requires_body=true",
+      "line 49: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:cardlist|page)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除信息流广告\", requires_body=true",
+      "line 51: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/comments\\/build_comments\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除评论区广告\", requires_body=true",
+      "line 53: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:container\\/asyn|flowlist|flowpage)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除个人微博详情页广告\", requires_body=true",
+      "line 55: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/friendships\\/(?:create|destroy)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除关注、取消关注弹窗\", requires_body=true",
+      "line 57: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/profile\\/(?:container_timeline|dealatt|me|statuses\\/tab|userinfo)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除个人主页广告\", requires_body=true",
+      "line 59: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/shproxy\\/chaohua\\/discovery\\/searchactive\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除超话搜索页广告\", requires_body=true",
+      "line 61: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:comments_expand_child|container_detail_comment)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除评论区广告\", requires_body=true",
+      "line 63: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:container_detail\\?|container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除信息流广告\", requires_body=true",
+      "line 65: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:extend|show)\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除微博详情页广告\", requires_body=true",
+      "line 67: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/video\\/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除视频流广告\", requires_body=true",
+      "line 69: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/huati\\/discovery_home_bottom_channels\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除超话顶部标签\", requires_body=true",
+      "line 71: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/direct_messages\\/user_list\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除消息页列表广告\", requires_body=true",
+      "line 73: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/messageflow\\/notice\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除消息页提醒\", requires_body=true",
+      "line 75: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/search\\/(?:container_timeline|finder)\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除热门微博信息流广告\", requires_body=true",
+      "line 77: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.weibo\\.cn\\/2\\/searchall\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除发现页搜索结果广告\", requires_body=true",
+      "line 79: Unconverted script line: response if ${url} ~= /^https:\\/\\/bootpreload\\.uve\\.weibo\\.com\\/v[12]\\/ad\\/preload/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除开屏广告 preload\", requires_body=true",
+      "line 81: Unconverted script line: response if ${url} ~= /^https:\\/\\/sdkapp\\.uve\\.weibo\\.com\\/interface\\/sdk\\/sdkad\\.php/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除开屏广告 sdkad\", requires_body=true",
+      "line 83: Unconverted script line: response if ${url} ~= /^https:\\/\\/wbapp\\.uve\\.weibo\\.com\\/(?:preload\\/get_ad|wbapplua\\/wbpullad\\.lua)/i then script(\"https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js\") with tag=\"移除开屏广告 wbapplua\", requires_body=true"
+    ]
   },
   {
     "name": "微店去广告",
@@ -1565,15 +1807,30 @@
     "name": "微信外部链接解锁",
     "source": "https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx",
     "output": "surge-modules/Weixin_external_links_unlock.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: response if ${url} ~= /^https\\:\\/\\/(weixin110\\.qq|security.wechat)\\.com\\/cgi-bin\\/mmspamsupport-bin\\/newredirectconfirmcgi\\?/i then script(\"https://kelee.one/Resource/JavaScript/Weixin/Weixin_external_links_unlock.js\") with tag=\"微信外部链接解锁\", requires_body=true"
+    ]
   },
   {
     "name": "微信小程序去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx",
     "output": "surge-modules/WexinMiniPrograms_Remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 213: Unconverted script line: response if ${url} ~= /^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js\") with tag=\"企迈点单系统去广告\", requires_body=true",
+      "line 215: Unconverted script line: response if ${url} ~= /^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js\") with tag=\"EMS中国邮政物流速递去广告\", requires_body=true",
+      "line 217: Unconverted script line: response if ${url} ~= /^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js\") with tag=\"小兔充充去广告\", requires_body=true",
+      "line 219: Unconverted script line: response if ${url} ~= /^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js\") with tag=\"全家微会员去广告\", requires_body=true",
+      "line 221: Unconverted script line: response if ${url} ~= /^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js\") with tag=\"罗森点点去广告\", requires_body=true",
+      "line 223: Unconverted script line: response if ${url} ~= /^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js\") with tag=\"茶颜悦色去广告\", requires_body=true",
+      "line 225: Unconverted script line: response if ${url} ~= /^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js\") with tag=\"COCO点单去广告\", requires_body=true",
+      "line 227: Unconverted script line: response if ${url} ~= /^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js\") with tag=\"滴滴青桔去广告\", requires_body=true",
+      "line 229: Unconverted script line: response if ${url} ~= /^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js\") with tag=\"一点点+去广告\", requires_body=true",
+      "line 231: Unconverted script line: response if ${url} ~= /^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js\") with tag=\"M Stand去广告\", requires_body=true",
+      "line 233: Unconverted script line: response if ${url} ~= /^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js\") with tag=\"T3出行去广告\", requires_body=true",
+      "line 235: Unconverted script line: response if ${url} ~= /^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js\") with tag=\"古茗去广告\", requires_body=true"
+    ]
   },
   {
     "name": "沃尔玛去广告",
@@ -1656,8 +1913,21 @@
     "name": "小红书去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx",
     "output": "surge-modules/RedPaper_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 31: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/note\\/(?:imagefeed|live_photo\\/save)/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除图片和实况照片水印\", requires_body=true",
+      "line 33: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/system\\/service\\/ui\\/config\\?/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除整体配置 ui\", requires_body=true",
+      "line 35: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/system_service\\/config\\?/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除开屏广告 config\", requires_body=true",
+      "line 37: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v2\\/system_service\\/splash_config/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除开屏广告 splash_config\", requires_body=true",
+      "line 39: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v2\\/(?:note\\/widgets|user\\/followings\\/followfeed)/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除详情页小部件、关注页感兴趣的人\", requires_body=true",
+      "line 41: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/followfeed\\?/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除信息流广告\", requires_body=true",
+      "line 43: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v5\\/recommend\\/user\\/follow_recommend\\?/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除详情页感兴趣的人\", requires_body=true",
+      "line 45: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/interaction\\/comment\\/video\\/download|v5\\/note\\/comment\\/list)/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除评论区实况照片水印\", requires_body=true",
+      "line 47: Unconverted script line: response if ${url} ~= /^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v2\\/note\\/feed|v3\\/note\\/videofeed)/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除图片和视频水印\", requires_body=true",
+      "line 49: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:edith|rec)\\.xiaohongshu\\.com\\/api\\/sns\\/v6\\/homefeed\\?/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除信息流广告\", requires_body=true",
+      "line 51: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:edith|so)\\.xiaohongshu\\.com\\/api\\/sns\\/v10\\/search\\/notes\\?/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除搜索页广告\", requires_body=true",
+      "line 53: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:edith|rec|www)\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v4\\/note\\/videofeed|v10\\/note\\/video\\/save)/i then script(\"https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js\") with tag=\"移除视频水印\", requires_body=true"
+    ]
   },
   {
     "name": "小桔充电去广告",
@@ -1691,8 +1961,10 @@
     "name": "小象超市去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/iMaiCai_remove_ads.lpx",
     "output": "surge-modules/iMaiCai_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 23: Unconverted script line: response if ${url} ~= /^https:\\/\\/portal-portm\\.meituan\\.com\\/horn_ios\\/mergeRequest/i then script(\"https://kelee.one/Resource/JavaScript/iMaiCai/iMaiCai_remove_ads.js\") with tag=\"移除下发广告\", requires_body=true"
+    ]
   },
   {
     "name": "小宇宙去广告",
@@ -1873,8 +2145,11 @@
     "name": "中国人保去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/PICC_Insurance_remove_ads.lpx",
     "output": "surge-modules/PICC_Insurance_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 19: Unconverted script line: response if ${url} ~= /^https:\\/\\/zgrb\\.epicc\\.com\\.cn\\/G-HAPP\\/a\\/config\\/homeInit\\/v3/i then script(\"https://kelee.one/Resource/JavaScript/PICC_Insurance/PICC_Insurance_remove_ads.js\") with tag=\"移除主页推广\", requires_body=true",
+      "line 21: Unconverted script line: response if ${url} ~= /^https:\\/\\/zgrb\\.epicc\\.com\\.cn\\/G-HAPP\\/mpageconfig\\/myPageConfigList\\/v3/i then script(\"https://kelee.one/Resource/JavaScript/PICC_Insurance/PICC_Insurance_remove_ads.js\") with tag=\"移除我的页面推广\", requires_body=true"
+    ]
   },
   {
     "name": "中国天气去广告",
@@ -1887,8 +2162,11 @@
     "name": "中国移动云盘去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/mobileClouds_remove_ads.lpx",
     "output": "surge-modules/mobileClouds_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 14: Unconverted script line: response if ${url} ~= /^https:\\/\\/jzts\\.cmpassport\\.com\\/personalized\\/getPushContent/i then script(\"https://kelee.one/Resource/JavaScript/mobileClouds/mobileClouds_remove_ads.js\") with tag=\"移除开屏广告\", requires_body=true",
+      "line 16: Unconverted script line: response if ${url} ~= /^https:\\/\\/ad\\.mcloud\\.139\\.com\\/advertapi\\/adv-filter\\//i then script(\"https://kelee.one/Resource/JavaScript/mobileClouds/mobileClouds_remove_ads.js\") with tag=\"移除应用内广告\", requires_body=true"
+    ]
   },
   {
     "name": "中华万年历去广告",
@@ -1908,8 +2186,12 @@
     "name": "自动加入TestFlight",
     "source": "https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx",
     "output": "surge-modules/Auto_Join_TF.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "needs-review",
+    "warnings": [
+      "line 25: Unconverted script line: request if ${url} ~= /^https?:\\/\\/testflight\\.apple\\.com\\/v3\\/accounts\\/.*\\/apps$/i then script(\"https://kelee.one/Resource/JavaScript/TestFlight/CaptureAccountToken.js\") with enable=${CaptureAccountToken}, tag=\"获取账号令牌\"",
+      "line 26: Script line does not contain script-path: cron ${TaskCron} then script(\"https://kelee.one/Resource/JavaScript/TestFlight/AutoJoinTF.js\") with enable=${RunTask}, tag=\"自动加入TF\", timeout=600",
+      "line 27: Script line does not contain script-path: cron ${TaskMonitor} then script(\"https://kelee.one/Resource/JavaScript/TestFlight/AutoMonitorTF.js\") with enable=${RunMonitor}, tag=\"监控TF位置\", timeout=30"
+    ]
   },
   {
     "name": "纵横小说去广告",

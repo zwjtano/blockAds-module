@@ -9,7 +9,7 @@
 #!system_version=
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weidian.png
-#!date=2026-08-27 22:53:53
+#!date=2026-10-02 13:57:49
 
 [URL Rewrite]
 request if ${url} ~= /^https:\/\/thor\.weidian\.com\/ares\/home\.splash\//i then reject_dict(200)

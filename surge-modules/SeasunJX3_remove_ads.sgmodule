@@ -9,13 +9,13 @@
 #!system_version=
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SeasunJX3.png
-#!date=2026-06-01 17:11:35
+#!date=2026-10-02 13:57:49
 
 [General]
 real-ip=*-update.xoyocdn.com, xg-flow.xoyo.com
 
 [URL Rewrite]
-^https:\/\/jx3comm\.xoyocdn\.com\/jx3gc\/zhcn\/login_ad\/WebCareer\/WebCareerTab\.txt reject
+request if ${url} ~= /^https:\/\/jx3comm\.xoyocdn\.com\/jx3gc\/zhcn\/login_ad\/WebCareer\/WebCareerTab\.txt/i then reject(404)
 
 [MITM]
 hostname = %APPEND% jx3comm.xoyocdn.com

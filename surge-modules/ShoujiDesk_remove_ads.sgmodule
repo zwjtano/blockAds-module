@@ -9,7 +9,7 @@
 #!system_version=
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShoujiDesk.png
-#!date=2026-09-15 23:26:38
+#!date=2026-10-02 13:57:49
 
 [URL Rewrite]
 request if ${url} ~= /^https:\/\/api\.tdz5\.com\/search\/hotword\?/i then reject_dict(200)

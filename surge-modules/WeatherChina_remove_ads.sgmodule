@@ -9,10 +9,10 @@
 #!system_version=
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WeatherChina.png
-#!date=2026-06-30 21:38:58
+#!date=2026-10-02 13:57:49
 
 [URL Rewrite]
-^https:\/\/tqtdata\.weathercn\.com\/forestbox\/getVideoListApp\? reject-dict
+request if ${url} ~= /^https:\/\/tqtdata\.weathercn\.com\/forestbox\/getVideoListApp\?/i then reject_dict(200)
 
 [MITM]
 hostname = %APPEND% tqtdata.weathercn.com
