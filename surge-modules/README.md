@@ -247,7 +247,6 @@
 - [新浪财经去广告](SinaStock_remove_ads.sgmodule)
 - [雪球去广告](Snowball_remove_ads.sgmodule)
 - [学习通去广告](ChaoXingStudy_remove_ads.sgmodule)
-- [迅雷去广告](XunLei_remove_ads.sgmodule)
 - [医考帮去广告](YiKaoBang_remove_ads.sgmodule)
 - [一刻相册去广告](BaiduPhoto_remove_ads.sgmodule)
 - [萤石云视频去广告](VideoGo_remove_ads.sgmodule)

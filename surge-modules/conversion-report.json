@@ -920,23 +920,8 @@
     "name": "高德地图去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx",
     "output": "surge-modules/Amap_remove_ads.sgmodule",
-    "status": "needs-review",
-    "warnings": [
-      "line 40: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/aos\\/perception\\/publicTravel\\/beforeNavi\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除路线规划推广\", requires_body=true",
-      "line 41: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/bus\\/plan\\/integrate\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除路线规划、导航结束页推广\", requires_body=true",
-      "line 42: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/c3frontend\\/(?:af-(?:hotel|launch)\\/page\\/main|af-nearby\\/nearby)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除导航详情页底部酒店、处理附近页\", requires_body=true",
-      "line 43: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/perception\\/drive\\/(?:routeInfo|routePlan)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除路线规划推广\", requires_body=true",
-      "line 44: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_bff\\/hotword\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除搜索栏推广\", requires_body=true",
-      "line 45: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/(?:mps|search\\/sp|sug|tips_operation_location)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除搜索详情页推广\", requires_body=true",
-      "line 46: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/(?:card-service-plan-home|main-page)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除首页推广\", requires_body=true",
-      "line 47: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/frogserver\\/aocs\\/updatable\\/1\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除首页推广\", requires_body=true",
-      "line 48: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/dsp\\/profile\\/index\\/nodefaasv3\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除我的页面推广\", requires_body=true",
-      "line 49: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search\\/nearbyrec_smart\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除附近页推广\", requires_body=true",
-      "line 50: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5\\.amap\\.com\\/ws\\/valueadded\\/alimama\\/splash_screen\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除开屏广告\", requires_body=true",
-      "line 51: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:car\\/order\\/content_info|order_web\\/friendly_information)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除打车页推广卡片、弹窗\", requires_body=true",
-      "line 52: Unconverted script line: response if ${url} ~= /^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/promotion-web\\/resource(\\/home)?\\?/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除打车页红点角标、天气图标\", requires_body=true",
-      "line 53: Unconverted script line: response if ${url} ~= /^https:\\/\\/(?:info|m5)\\.amap\\.com\\/ws\\/shield\\/search\\/(?:common\\/coupon\\/info|poi\\/detail)/i then script(\"https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js\") with tag=\"移除导航详情页推广\", requires_body=true"
-    ]
+    "status": "ok",
+    "warnings": []
   },
   {
     "name": "稿定设计去广告",
@@ -2012,8 +1997,9 @@
     "name": "迅雷去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/XunLei_remove_ads.lpx",
     "output": "surge-modules/XunLei_remove_ads.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "failed",
+    "warnings": [],
+    "error": "Remote end closed connection without response"
   },
   {
     "name": "医考帮去广告",
