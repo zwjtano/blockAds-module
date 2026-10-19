@@ -1997,9 +1997,8 @@
     "name": "迅雷去广告",
     "source": "https://kelee.one/Tool/Loon/Lpx/XunLei_remove_ads.lpx",
     "output": "surge-modules/XunLei_remove_ads.sgmodule",
-    "status": "failed",
-    "warnings": [],
-    "error": "Remote end closed connection without response"
+    "status": "ok",
+    "warnings": []
   },
   {
     "name": "医考帮去广告",
