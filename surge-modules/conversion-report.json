@@ -264,8 +264,9 @@
     "name": "QQ链接解锁",
     "source": "https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx",
     "output": "surge-modules/QQ_Redirect.sgmodule",
-    "status": "ok",
-    "warnings": []
+    "status": "failed",
+    "warnings": [],
+    "error": "The read operation timed out"
   },
   {
     "name": "QQ音乐去广告",
