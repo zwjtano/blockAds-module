@@ -34,6 +34,7 @@
 - [OKOK去广告](OKOK_remove_ads.sgmodule)
 - [PICOOC去广告](PICOOC_remove_ads.sgmodule)
 - [Pinterest去广告](Pinterest_remove_ads.sgmodule)
+- [QQ链接解锁](QQ_Redirect.sgmodule)
 - [QQ音乐去广告](QQMusic_remove_ads.sgmodule)
 - [Reddit去广告](Reddit_remove_ads.sgmodule)
 - [ReelShort去广告](ReelShort_remove_ads.sgmodule)
